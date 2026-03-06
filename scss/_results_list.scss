@@ -1,0 +1,295 @@
+.result_list {
+    margin: 10px 0 9px;
+
+    .item_title {
+        margin-bottom: 6px;
+        font-weight: 700;
+        color: $cl-black;
+        display: none;
+        align-items: center;
+        height: 33px;
+        padding: 9px 8px;
+
+        @include breakpoint($mobile-small) {
+            display: flex;
+        }
+
+        .result_title,
+        .result_address,
+        .result_date,
+        .result_status,
+        .result_type,
+        .result_agent {
+            padding-right: 8px;
+        }
+
+        .result_title {
+            @include breakpoint($mobile-small) {
+                width: 13.73%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        .result_address {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        .result_date {
+            @include breakpoint($mobile-small) {
+                width: 11.56%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 9.86%;
+            }
+        }
+
+        .result_status {
+            @include breakpoint($mobile-small) {
+                width: 9.15%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 8.54%;
+            }
+        }
+
+        .result_type {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 13.16%;
+            }
+        }
+
+        .result_agent {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        .result_participants {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+    }
+
+
+    .result_item {
+        border-radius: 6px;
+        padding: 9px 8px;
+        background: $cl-white;
+        cursor: pointer;
+        transition: all ease 0.3s;
+        margin-bottom: 6px;
+        align-items: start;
+
+        &:nth-child(even) {
+            background: $cl-light_blue;
+        }
+
+        &:hover {
+            background: $cl-light_blue_hv;
+
+            .result_title {
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        strong {
+            font-weight: 700;
+            color: $cl-black;
+        }
+
+        span.title_mob {
+            font-weight: 700;
+            color: $cl-black;
+            margin-right: 8px;
+        }
+
+        span {
+            font-weight: 400;
+            color: $cl-black;
+        }
+
+
+        @include breakpoint($mobile-small) {
+            display: flex;
+            padding: 8px 8px;
+        }
+
+        .result_title,
+        .result_address,
+        .result_date,
+        .result_status,
+        .result_type,
+        .result_agent {
+            padding-right: 8px;
+        }
+
+        .result_title {
+            @include breakpoint($mobile-small) {
+                width: 13.73%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        .result_address {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        .result_date {
+            @include breakpoint($mobile-small) {
+                width: 11.56%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 9.86%;
+            }
+        }
+
+        .result_status {
+            display: none;
+
+            @include breakpoint($mobile-small) {
+                width: 9.15%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 8.54%;
+                display: block;
+            }
+        }
+
+        .result_type {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 13.16%;
+            }
+        }
+
+        .result_agent {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        .result_participants {
+            @include breakpoint($mobile-small) {
+                width: 16.39%;
+            }
+
+            @include breakpoint($mobile) {
+                width: 17.11%;
+            }
+        }
+
+        &.result_item_no_pointer {
+            cursor: default
+        }
+    }
+
+    .result_title,
+    .result_address,
+    .result_date {
+        margin-bottom: 2px;
+
+        @include breakpoint($mobile-small) {
+            margin-bottom: 0;
+        }
+    }
+
+    .result_title {
+        display: flex;
+        align-items: start;
+
+        a {
+            text-decoration: underline;
+            font-weight: 500;
+            color: $cl-blue;
+            transition: all ease 0.3s;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 8px;
+
+            @include breakpoint($mobile-small) {
+                margin-right: 0;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .flag {
+            @include breakpoint($mobile-small) {
+                display: none;
+            }
+        }
+    }
+
+    .title_mob {
+        @include breakpoint($mobile-small) {
+            display: none;
+        }
+    }
+}
+.num_searc{
+   position: relative;
+   padding-left: 14px;
+   margin: 0 0 10px;
+   font-weight: 400;
+   // font-size: 8px;
+   font-size: 12px;
+   line-height: 1.2;
+   color: $cl-gray_1;
+   display: block;
+   &:after{
+      position: absolute;
+      content: '\e90d';
+      font-family: 'icomoon';
+      line-height: 1;
+      top: 0;
+      left: 0;
+      font-size: 11px;
+      color: $cl-gray_1;
+   }
+}

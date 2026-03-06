@@ -1,0 +1,686 @@
+@import '_parametrs_new';
+
+.container{
+	padding: 0 20px;
+   @include breakpoint($tablet){
+      padding: 0 32px;
+	}
+}
+
+.about_page{
+   padding-top: 25px;
+   @include breakpoint($tablet){
+      overflow: hidden;
+      padding-top: 43px;
+   }
+}
+
+.item_stage{
+   margin: 0 0 60px;
+   @include breakpoint($tablet){
+      margin: 0 0 91px;
+   }
+   .inner_item{
+      position: relative;
+      @include breakpoint($tablet){
+         padding-left: 148px;
+      }
+      .title_stage{
+         @include breakpoint($tablet){
+            position: absolute;
+            left: 0;
+            top: 22px;
+         }
+      }
+   }
+   .title_stage{
+      position: relative;
+      padding-left: 16px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 11px;
+      font-weight: 500;
+      line-height: 1.257;
+      font-size: 14px;
+      color: $cl-black;
+      @include breakpoint($tablet){
+         font-size: 18px;
+         padding-left: 18px;
+      }
+      &:after{
+         position: absolute;
+         content: '';
+         border-radius: 50%;
+         width: 9px;
+         height: 9px;
+         background: $cl-black;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 0;
+         @include breakpoint($tablet){
+            width: 9px;
+            height: 9px;
+         }
+      }
+   }
+   .subtitle{
+      margin: 1px 0 1px;
+      color: $cl-black;
+      line-height: 1.257;
+      font-weight: 600;
+      font-size: 22px;
+      @include breakpoint($tablet){
+         font-size: 46px;
+      }
+   }
+   .title_page{
+      color: $cl-black;
+      font-weight: 600;
+      line-height: 1.257;
+      font-size: 36px;
+      margin: 0 0 16px;
+      @include breakpoint($tablet){
+         font-size: 46px;
+      }
+      span{
+         color: #3D52E1;
+      }
+   }
+   p{
+      font-size: 16px;
+      line-height: 1.3;
+      color: $cl-black;
+      margin: 16px 0 20px;
+      font-weight: 400;
+      margin-right: -3px;
+      @include breakpoint($tablet){
+         font-size: 18px;
+      }
+      strong{
+         font-weight: 600;
+      }
+      &.small{
+         font-size: 12px;
+         margin: 29px 0;
+         @include breakpoint($tablet){
+            font-size: 20px;
+         }
+      }
+      &.show_m{
+         @include breakpoint($tablet){
+            display: none;
+         }
+      }
+   }
+   .img_box{
+      overflow: hidden;
+      margin: 30px 0 30px;
+      border-radius: 10px;
+      position: relative;
+      @include breakpoint($tablet){
+         margin: 21px 0 24px;
+      }
+      img{
+         position: absolute;
+         display: block;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+      &:before{
+         display: block;
+         content: '';
+         padding-top: 53%;
+         @include breakpoint($mobile){
+            padding-top: 33%;
+         }
+         @include breakpoint($tablet){
+            padding-top: 34.7%;
+         }
+      }
+   }
+   .title_txt{
+      font-size: 20px;
+      color: $cl-black;
+      line-height: 1.25;
+      font-weight: 500;
+      margin: 0 0 20px;
+      @include breakpoint($tablet){
+         font-size: 44px;
+      }
+      span{
+         color: #3D52E1;
+      }
+      &.big_txt{
+         font-size: 22px;
+         margin: 16px 0 28px;
+         @include breakpoint($tablet){
+            font-size: 44px;
+         }
+      }
+   }
+   .btn{
+      font-size: 16px;
+      font-weight: 600;
+      height: 53px;
+   }
+   &.item_2{
+      .inner_item{
+         position: relative;
+         @include breakpoint($tablet){
+            padding-left: 148px;
+         }
+         .title_stage{
+            @include breakpoint($tablet){
+               position: absolute;
+               top: 22px;
+               left: 0;
+            }
+         }
+      }
+      p{
+         @include breakpoint($tablet){
+            font-size: 26px;
+            max-width: 688px;
+            margin: 24px 0 47px;
+         }
+         &.small{
+            @include breakpoint($tablet){
+               font-size: 20px;
+               margin: 47px 0 24px;
+            }
+         }
+      }
+   }
+   &.item_4{
+      .head_box{
+         p{
+            @include breakpoint($tablet){
+               padding: 0 0 0 16px;
+               font-size: 20px;
+               margin: 0 0 26px;
+            }
+         }
+      }
+   }
+}
+.head_box{
+   @include breakpoint($tablet){
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+   .title_page{
+      @include breakpoint($tablet){
+         width: 55%;
+      }
+   }
+   p{
+      @include breakpoint($tablet){
+         width: 45%;
+         padding-left: 20px;
+      }
+   }
+   &.with_title{
+      position: relative;
+      padding-left: 133px;
+      @include breakpoint($tablet){
+         position: static;
+         padding: 0;
+      }
+      .title_stage{
+         position: absolute;
+         top: 5px;
+         left: 0;
+      }
+      .title_txt{
+         padding-bottom: 20px;
+         position: relative;
+         @include breakpoint($tablet){
+            padding-bottom: 48px;
+         }
+         &:after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            background: #3D52E1;
+            height: 2px;
+            right: -20px;
+            @include breakpoint($tablet){
+               height: 3px;
+               right: -9999px;
+            }
+         }
+      }
+   }
+   .title_txt{
+      &.big_txt{
+         @include breakpoint($tablet){
+            width: 55%;
+            margin: 28px 0 49px;
+         }
+      }
+   }
+}
+.list_team{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 15px -6.6px 15px;
+   @include breakpoint($tablet){
+      display: block;
+      position: relative;
+      overflow: visible;
+      margin: 0 0 12px;
+      padding-top: 32px;
+   }
+   .swiper-wrapper{
+      flex-wrap: wrap;
+      @include breakpoint($tablet){
+         flex-wrap: nowrap;
+      }
+   }
+   .item_list{
+      width: 50%;
+      padding: 0 6.5px;
+      margin: 0 0 13px;
+      @include breakpoint($mobile-small){
+         width: 33.33%;
+      }
+      @include breakpoint($tablet){
+         padding: 0;
+         margin-bottom: 0;
+         width: 260px;
+         margin-right: 24px;
+      }
+   }
+   .inner_list{
+      position: relative;
+      
+   }
+   .photo{
+      overflow: hidden;
+      border-radius: 10px;
+      @include breakpoint($tablet){
+         border-radius: 12px;
+      }
+      img{
+         display: block;
+         width: 100%;
+      }
+   }
+   .dscr{
+      position: absolute;
+      bottom: 11px;
+      left: 11px;
+      right: 11px;
+      background: $cl-white;
+      padding: 4px 7px;
+      border-radius: 8px;
+      @include breakpoint($tablet){
+         border-radius: 8px;
+         bottom: 18px;
+         left: 18px;
+         right: 18px;
+         padding: 8px 10px;
+      }
+      .name{
+         display: block;
+         margin: 0 0 -3px;
+         line-height: 1.3;
+         font-weight: 500;
+         color: $cl-black;
+         font-size: 12px;
+         @include breakpoint($tablet){
+            font-size: 18px;
+         }
+      }
+      .post{
+         display: block;
+         color: #8F8F8F;
+         font-size: 10px;
+         line-height: 1.3;
+         font-weight: 500;
+         @include breakpoint($tablet){
+            font-size: 14px;
+         }
+      }
+   }
+   .swiper-button-next,
+   .swiper-button-prev{
+      position: absolute;
+      top: -32px;
+      right: 0;
+      left: auto;
+      width: 72px;
+      height: 16px;
+      margin: 0;
+      transform: none;
+      display: none;
+      @include breakpoint($tablet){
+         display: block;
+      }
+      &:after{
+         display: none;
+      }
+   }
+   .swiper-button-next{
+      background: url("../new_img/arrow_right.svg") no-repeat;
+   }
+   .swiper-button-prev{
+      background: url("../new_img/arrow_left.svg") no-repeat;
+      right: 113px;
+   }
+}
+.idea_list{
+   margin: 29px 0 0;
+   @include breakpoint($mobile){
+      display: flex;
+      flex-wrap: wrap;
+      margin: 29px -10px 0;
+   }
+   @include breakpoint($screen){
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      margin: 29px -26px 0 0;
+   }
+   .item_list{
+      margin: 0 0 20px;
+      @include breakpoint($mobile){
+         width: 50%;
+         padding: 0 10px;
+      }
+      @include breakpoint($screen){
+         padding: 0;
+         margin: 0 26px 0 0;
+         width: auto;
+      }
+      &.item_1{
+         @include breakpoint($screen){
+            flex: 1 1 26.33%;
+         }
+         .img{
+            max-width: 217px;
+            @include breakpoint($tablet){
+               max-width: 192px;
+               margin-bottom: 36px;
+               margin-top: 33px;
+            }
+         }
+      }
+      &.item_2{
+         @include breakpoint($screen){
+            flex: 1 1 36.27%;
+         }
+         .inner_list{
+            @include breakpoint($screen){
+               padding-top: 41px;
+            }
+         }
+         .img{
+            overflow: hidden;
+            height: 70px;
+            margin-top: 22px;
+            margin-bottom: -20px;
+            @include breakpoint($tablet){
+               height: auto;
+               margin-top: 62px;
+            }
+         }
+      }
+      &.item_3{
+         @include breakpoint($screen){
+            flex: 1 1 22.31%;
+         }
+         .inner_list{
+            background: #3D52E1;
+            color: #FCFCFC;
+            @include breakpoint($screen){
+               display: flex;
+               flex-wrap: wrap;
+               flex-direction: column;
+               justify-content: space-between;
+               min-height: 390px;
+            }
+         }
+         p,
+         .title{
+            color: #FCFCFC;
+         }
+         p{
+            @include breakpoint($screen){
+               order: 1;
+            }
+         }
+         .title{
+            @include breakpoint($screen){
+               order: 2;
+            }
+         }
+      }
+      &.item_4{
+         @include breakpoint($screen){
+            flex: 1 1 30.6%;
+         }
+         .inner_list{
+            @include breakpoint($screen){
+               padding-top: 41px;
+            }
+         }
+         .img{
+            margin: 20px -10px -10px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            @include breakpoint($screen){
+               margin-top: 62px;
+            }
+            img{
+               position: absolute;
+               display: block;
+               width: 100%;
+               height: 100%;
+               top: 0;
+               left: 0;
+               object-fit: cover;
+               max-width: none;
+            }
+            &:before{
+               content: '';
+               display: block;
+               padding-top: 47.5%;
+               @include breakpoint($screen){
+                  padding-top: 64.5%;
+               }
+            }
+         }
+      }
+   }
+   .inner_list{
+      border-radius: 10px;
+      padding: 20px;
+      background: #F4F4F4;
+      text-align: center;
+      @include breakpoint($mobile-small){
+         width: 100%;
+         height: 100%;
+      }
+      @include breakpoint($tablet){
+         text-align: left;
+         padding: 25px;
+      }
+   }
+   .title{
+      display: block;
+      margin: 0 0 15px;
+      line-height: 1.3;
+      font-weight: 500;
+      font-size: 16px;
+      color: $cl-black;
+      @include breakpoint($tablet){
+         font-size: 20px;
+         margin: 0 0 15px;
+      }
+   }
+   .img{
+      margin: 0 auto 13px;
+      img{
+         max-width: 100%;
+      }
+   }
+   p{
+      margin: 0 0 0;
+      font-weight: 400;
+      color: $cl-black;
+      line-height: 1.3;
+      font-size: 14px;
+      @include breakpoint($tablet){
+         font-size: 16px;
+      }
+   }
+}
+.stage_wrap{
+   @include breakpoint($tablet){
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+   }
+   .col_2{
+      @include breakpoint($tablet){
+         width: 43%;
+         padding: 0 16px;
+      }
+   }
+   .col_1{
+      @include breakpoint($tablet){
+         width: 57%;
+         padding: 0 16px;
+      }
+   }
+   .btn_holder{
+      @include breakpoint($tablet){
+         margin-top: 63px;
+      }
+      .btn{
+         @include breakpoint($tablet){
+            font-size: 20px;
+            height: 51px;
+            max-width: 277px;
+         }
+      }
+      &.show_m{
+         @include breakpoint($tablet){
+            display: none;
+         }
+      }
+      &.show_d{
+         display: none;
+         @include breakpoint($tablet){
+            display: block;
+         }
+      }
+   }
+   .title_txt{
+      &.big_txt{
+         @include breakpoint($tablet){
+            margin-top: 28px;
+            margin-bottom: 38px;
+            max-width: 532px;
+         }
+      }
+   }
+   p{
+      @include breakpoint($tablet){
+         font-size: 20px;
+         margin: 13px 0 36px;
+         max-width: 556px;
+      }
+   }
+}
+.vision_list{
+   margin-top: 49px;
+   @include breakpoint($mobile){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   @include breakpoint($tablet){
+      display: block;
+      margin: 0;
+   }
+}
+.item_vision{
+   background: #F4F4F4;
+   border-radius: 10px;
+   padding: 12px;
+   margin: 0 0 20px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: start;
+   @include breakpoint($mobile){
+      width: calc(50% - 10px);
+   }
+   @include breakpoint($tablet){
+      width: 100%;
+   }
+   .img{
+      width: 117px;
+      height: 169px;
+      overflow: hidden;
+      border-radius: 8px;
+      position: relative;
+      @include breakpoint($mobile){
+         width: 105px;
+         height: 138px;
+      }
+      @include breakpoint($tablet){
+         width: 84px;
+         height: 118px;
+      }
+      img{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         display: block;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+   }
+   .dscr{
+      width: calc(100% - 117px);
+      padding-left: 15px;
+      padding-top: 3px;
+      @include breakpoint($mobile){
+         width: calc(100% - 105px);
+         padding-left: 20px;
+      }
+      @include breakpoint($tablet){
+         width: calc(100% - 84px);
+         padding-left: 16px;
+      }
+   }
+   .title{
+      margin: 0 0 14px;
+      line-height: 1.3;
+      font-weight: 600;
+      font-size: 16px;
+      color: $cl-black;
+      @include breakpoint($tablet){
+         font-size: 20px;
+         margin: 0 0 10px;
+      }
+   }
+   p{
+      line-height: 1.3;
+      font-weight: 400;
+      color: $cl-black;
+      font-size: 12px;
+      margin: 0;
+      @include breakpoint($tablet){
+         font-size: 13px;
+      }
+   }
+}

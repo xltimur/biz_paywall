@@ -1,0 +1,144 @@
+@import '_parametrs';
+.pagination_box {
+    margin: 21px 0 30px;
+    position: relative;
+    padding: 0 25px;
+
+    @include breakpoint($mobile-small) {
+        padding: 0 60px;
+        max-width: 100%;
+    }
+
+    .prev,
+    .next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        text-decoration: none;
+
+        @include breakpoint($mobile-small) {
+            width: auto;
+            height: auto;
+        }
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'icomoon';
+            line-height: 1;
+            font-size: 12px;
+            color: $cl-blue;
+
+            @include breakpoint($mobile-small) {
+                transform: translateY(-50%);
+                font-size: 8px;
+            }
+        }
+
+        &.not_page {
+            &:after {
+                color: $cl-gray_3;
+            }
+
+            span {
+                color: $cl-gray_3;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .prev {
+        left: 0;
+
+        @include breakpoint($mobile-small) {
+            padding-left: 16px;
+            left: 4px;
+        }
+
+        &:after {
+            content: '\e901';
+
+            @include breakpoint($mobile-small) {
+                left: 0;
+            }
+        }
+    }
+
+    .next {
+        right: 0;
+
+        @include breakpoint($mobile-small) {
+            padding-right: 18px;
+            right: 4px;
+        }
+
+        &:after {
+            content: '\e902';
+
+            @include breakpoint($mobile-small) {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+
+    span {
+        display: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.33;
+        letter-spacing: -0.01em;
+        color: $cl-blue;
+
+        @include breakpoint($mobile-small) {
+            display: block;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+        margin: 0 4px 0;
+        flex: 0 0 auto;
+        text-align: center;
+        width: 55px;
+        margin-bottom: 5px;
+
+        &.active {
+            a {
+                background: $cl-blue;
+                color: $cl-white;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        padding: 6px 5px 5px;
+        font-weight: 700;
+        color: $cl-blue;
+        border-radius: 6px;
+        border: 1px solid $cl-blue;
+        background: $cl-white;
+        text-decoration: none;
+        transition: all ease 0.3s;
+
+        &:hover {
+            background: $cl-blue;
+            color: $cl-white;
+        }
+    }
+}

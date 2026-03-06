@@ -1,0 +1,37 @@
+@import '_parametrs';
+@import '_results_list';
+@import '_states_block';
+
+.states_page{
+   .title_page{
+      margin: 6px 0 8px;
+   }
+   .title_block{
+      margin: 4px 0 9px;
+   }
+}
+.text_box{
+   margin: 8px 0 21px;
+   p{
+      margin: 0;
+   }
+   .num{
+      display: inline-block;
+      vertical-align: top;
+      padding: 4px 8px;
+      font-weight: 700;
+      // font-size: 8px;
+      font-size: 12px;
+      line-height: 1.2;
+      color: $cl-blue;
+      border-radius: 10px;
+      background: $cl-light_blue;
+      margin: 0 4px 0;
+   }
+}
+
+.seo_list {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}

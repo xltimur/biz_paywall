@@ -1,0 +1,68 @@
+@import '_parametrs';
+
+.text_box{
+   margin: 20px 0 20px;
+   position: relative;
+   padding-left: 47px;
+   font-family: $font-family !important;
+   &:before{
+      position: absolute;
+		top: 18px;
+      left: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		border-radius: 8px;
+		background: $cl-blue;
+		font-family: 'icomoon';
+		color: $cl-white;
+		line-height: 1;
+		font-size: 7px;
+   }
+   &.icon-arrow_right{
+      &:before{
+         content: "\e902";
+      }
+   }
+   .title_block{
+      margin: 0 0 12px;
+      padding: 0;
+   }
+   p{
+      margin: 0;
+      line-height: 1.4;
+      & + p{
+         margin: 18px 0 0;
+      }
+      a{
+         color: $cl-black;
+         &:hover{
+            text-decoration: none;
+         }
+      }
+   }
+}
+.text {
+    margin: 21px 0 20px;
+
+    p {
+        margin: 0;
+
+        & + p {
+            margin: 18px 0 0;
+        }
+    }
+
+    .circle_list {
+        list-style-type: disc;
+
+        li {
+            font-weight: normal;
+            margin: 0px;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.state_block {
+    margin: 20px 0;
+
+    .other-section {
+        line-height: 30px;
+        margin-left: 10px;
+    }
+}
+.state_list{
+   margin: 20px -5px -6px;
+   display: flex;
+   flex-wrap: wrap;
+   li{
+      margin: 0 0 10px;
+      width: 50%;
+      padding: 0 5px;
+      @include breakpoint($mobile-small){
+         width: 33.3%;
+      }
+      @include breakpoint($mobile){
+         width: 25%;
+      }
+      @include breakpoint($tablet-small){
+         width: 20%;
+      }
+   }
+   .state{
+      display: block;
+      margin: 0 0 2px;
+      a{
+         font-weight: 500;
+         text-decoration: underline;
+         transition: all ease 0.3s;
+         color: $cl-blue;
+         &:hover{
+            text-decoration: none;
+         }
+      }
+   }
+   .text{
+      display: block;
+      font-weight: 400;
+      color: $cl-gray_1;
+      margin-right: -4px;
+   }
+}
+
+.state_block_3 {
+    margin: 20px 0;
+
+    .other-section {
+        line-height: 30px;
+        margin-left: 10px;
+    }
+}
+
+.state_list_3 {
+    margin: 20px -5px -6px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin: 0 0 10px;
+        padding: 0 5px;
+        width: 33.3%;
+    }
+
+    .state {
+        display: block;
+        margin: 0 0 2px;
+
+        a {
+            font-weight: 500;
+            text-decoration: underline;
+            transition: all ease 0.3s;
+            color: $cl-blue;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .text {
+        display: block;
+        font-weight: 400;
+        color: $cl-gray_1;
+        margin-right: -4px;
+    }
+}
+
+.state_block_1 {
+    margin: 20px 0;
+
+    .other-section {
+        line-height: 30px;
+        margin-left: 10px;
+    }
+}
+
+.state_list_1 {
+    margin: 20px -5px -6px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin: 0 0 10px;
+        padding: 0 5px;
+        width: 100%;
+    }
+
+    .state {
+        display: block;
+        margin: 0 0 2px;
+
+        a {
+            font-weight: 500;
+            text-decoration: underline;
+            transition: all ease 0.3s;
+            color: $cl-blue;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .text {
+        display: block;
+        font-weight: 400;
+        color: $cl-gray_1;
+        margin-right: -4px;
+    }
+}

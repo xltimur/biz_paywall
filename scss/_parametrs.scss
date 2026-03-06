@@ -1,0 +1,72 @@
+// $container:1064px;
+$container:1100px;
+$max-container:1500px;
+
+$min_width: 320px;
+
+/// colors
+// $bg-gray: #EFF1F7;
+// $bg-gray_2: #F6F8FC;
+
+$cl-white: #fff;
+$cl-black: #000;
+$cl-gray_1: #474C56;
+$cl-gray_2: #8A95AC;
+$cl-gray_3: #C8D0E1;
+$cl-gray_4: #EEEEEE;
+$cl-gray_5: #FAFAFA;
+$cl-light_blue: #E9EFFD;
+$cl-light_blue_hv: #DBE4F7;
+$cl-blue: #3A50E0;
+$cl-blue_hv: #2638AD;
+$cl-light_green: #E4FAE9;
+$cl-green: #00B026;
+$cl-green_hv: #008A1E;
+$cl-light_red: #FFEDEE;
+$cl-red: #EB5760;
+
+
+// fonts
+$font-family:'DM Sans', Helvetica, Arial, sans-serif;
+
+
+// mixins
+
+
+// breakpoints
+$mobile-extra-small: 400px; // mobile 400px and less
+$mobile-small: 640px; // mobile 540px and less
+$mobile: 767px; // mobile 767px and less
+$tablet-small: 920px; // tablet 920 and less
+$tablet: 1020px; // tablet 1020px {desctop - 1} and less
+$large-screen: 1439px; // tablet 1025px {desctop - 1} and less
+$widescreen: 1630px; // tablet 1025px {desctop - 1} and less
+$retina: 1.5;  // standart retina > 1.5x
+$retina-hd: 2.5; // hd retina > 2.5x
+
+// breakpoints mixin
+@mixin breakpoint($rule){
+  @if ($rule == $retina or $rule == $retina-hd){
+    @media only screen and ( min-resolution : #{$retina*96} ), ( -webkit-min-device-pixel-ratio : #{$retina} ){
+     @content;
+    }
+  }
+  @else{
+    @media only screen and (min-width: #{$rule}){
+     @content;
+    }  
+  }
+}
+
+@mixin rem($rule){
+  @if ($rule == $retina or $rule == $retina-hd){
+    @media only screen and ( min-resolution : #{$retina*96} ), ( -webkit-min-device-pixel-ratio : #{$retina} ){
+     @content;
+    }
+  }
+  @else{
+    @media only screen and (min-width: #{$rule + 1}){
+     @content;
+    }  
+  }
+}

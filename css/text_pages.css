@@ -1,0 +1,61 @@
+.text_box {
+  margin: 20px 0 20px;
+  position: relative;
+  padding-left: 47px;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif !important;
+}
+.text_box:before {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: #3A50E0;
+  font-family: "icomoon";
+  color: #fff;
+  line-height: 1;
+  font-size: 7px;
+}
+.text_box.icon-arrow_right:before {
+  content: "\e902";
+}
+.text_box .title_block {
+  margin: 0 0 12px;
+  padding: 0;
+}
+.text_box p {
+  margin: 0;
+  line-height: 1.4;
+}
+.text_box p + p {
+  margin: 18px 0 0;
+}
+.text_box p a {
+  color: #000;
+}
+.text_box p a:hover {
+  text-decoration: none;
+}
+
+.text {
+  margin: 21px 0 20px;
+}
+.text p {
+  margin: 0;
+}
+.text p + p {
+  margin: 18px 0 0;
+}
+.text .circle_list {
+  list-style-type: disc;
+}
+.text .circle_list li {
+  font-weight: normal;
+  margin: 0px;
+  font-size: 14px;
+}/*# sourceMappingURL=text_pages.css.map */

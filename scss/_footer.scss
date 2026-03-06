@@ -1,0 +1,36 @@
+#footer{
+   padding: 20px 0 40px;
+}
+.foot_nav{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   margin: 0;
+   li{
+      margin: 0 12px 8px;
+   }
+   a{
+      display: block;
+      font-weight: 400;
+      // font-size: 10px;
+      font-size: 14px;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: $cl-gray_2;
+      transition: all ease 0.3s;
+      text-decoration: none;
+      &:hover{
+         color: $cl-blue;
+         text-decoration: none;
+      }
+   }
+}
+.copy{
+   text-align: center;
+   margin-top: 8px;
+   font-weight: 400;
+   // font-size: 8px;
+   font-size: 12px;
+   line-height: 1.2;
+}

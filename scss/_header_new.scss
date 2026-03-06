@@ -1,0 +1,140 @@
+@import '_parametrs_new';
+.main{
+   #header{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 34px 0 30px;
+      margin: 0;
+      @include breakpoint($tablet){
+         padding-top: 25px;
+      }
+      .logo{
+         background: url("../new_img/logo_wt.svg") no-repeat;
+         background-size: 100%;
+         margin: 0 auto;
+         width: 86px;
+         height: 44px;
+         @include breakpoint($mobile){
+            margin: 0;
+            margin-right: 24px;
+         }
+      }
+   }
+   &.new_promo{
+      #header{
+         .logo{
+            background: url("../images/logo.svg") no-repeat;
+            background-size: 100%;
+         }
+      }
+      .main_nav{
+         background: #3D52E1;
+         a{
+            color: $cl-white;
+         }
+      }
+   }
+}
+#header{
+   padding: 36px 0 0;
+   margin: 0 0 13px;
+   @include breakpoint($tablet){
+      padding: 48px 0 0;
+   }
+   .innert_head{
+       display: flex;
+      //  align-items: center;
+       justify-content: space-between;
+       @include breakpoint($tablet){
+          align-items: flex-start;
+       }
+   }
+   .logo{
+       display: block;
+       width: 79px;
+       height: 38px;
+       background: url("../images/logo.svg") no-repeat;
+       background-size: 100%;
+       z-index: 2;
+       margin-right: 12px;
+       @include breakpoint($mobile-small){
+           margin-right: 24px;
+       }
+       @include breakpoint($tablet){
+          width: 104px;
+          height: 55px;
+       }
+       a{
+           display: block;
+           height: 100%;
+       }
+   }
+   .search_form{
+      width: calc(100% - 95px);
+      margin: 0;
+      padding: 3px;
+      @include breakpoint($tablet){
+         width: calc(100% - 162px);
+         padding: 6px;
+         margin-top: 6px;
+      }
+      .srch{
+         padding-left: 31px;
+      }
+      input[type=text]{
+         height: 39px;
+         font-size: 12px;
+         @include breakpoint($tablet){
+            height: 36px;
+            font-size: 18px;
+         }
+      }
+      .icon-loop{
+         font-size: 14px;
+         @include breakpoint($tablet){
+            font-size: 16px;
+         }
+      }
+   }
+}
+.main_nav{
+   display: none;
+   margin: 0;
+   align-items: center;
+   justify-content: center;
+   border-radius: 8px;
+   background: #FCFCFC;
+   height: 52px;
+   padding: 0 36px;
+   position: relative;
+   z-index: 3;
+   @include breakpoint($mobile){
+      display: flex;
+   }
+   @include breakpoint($tablet){
+      border-radius: 6px;
+      height: 42px;
+      padding: 0 29px;
+   }
+   li{
+      height: 100%;
+   }
+   a{
+      display: flex;
+      height: 100%;
+      padding: 5px 36px;
+      align-items: center;
+      font-weight: 500;
+      line-height: 1;
+      font-size: 20px;
+      color: #3D52E1;
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      @include breakpoint($tablet){
+         padding: 5px 29px;
+         font-size: 16px;
+      }
+   }
+}

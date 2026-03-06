@@ -1,0 +1,137 @@
+@import '_parametrs';
+@import '_states_block';
+
+.promo_section{
+   margin: 0 0 20px;
+}
+.promo_text{
+   margin: 0 0 18px;
+   @include breakpoint($mobile){
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin: 0 0 21px;
+   }
+   .promo_img{
+      margin: 0 auto 9px;
+      max-width: 236px;
+      @include breakpoint($mobile){
+         margin: -42px 0 0;
+         max-width: none;
+         order: 2;
+         width: 349px;
+         text-align: center;
+      }
+      img{
+         width: auto;
+         max-width: 100%;
+      }
+   }
+}
+.promo_head{
+   margin: 9px 0 0;
+   @include breakpoint($mobile){
+      order: 1;
+      width: calc(100% - 349px);
+      margin: 0 0 25px;
+   }
+   .promo_title{
+      margin: 0 0 20px;
+      span{
+         @include breakpoint($mobile){
+            display: block;
+         }
+      }
+   }
+   .promo_subtitle{
+      display: block;
+      margin: 20px 0 0;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.2;
+   }
+}
+.section_box{
+   padding: 16px;
+   border-radius: 8px;
+   p{
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }
+}
+.about_block{
+   margin: 0 0 20px;
+   @include breakpoint($mobile){
+      display: flex;
+      flex-wrap: wrap;
+   }
+   @include breakpoint($tablet-small){
+      padding: 32px;
+   }
+   .img_box{
+      margin: 0 0 24px;
+      overflow: hidden;
+      border-radius: 8px;
+      @include breakpoint($tablet-small){
+         width: 365px;
+         margin: 0;
+      }
+      img{
+         max-width: 100%;
+         width: auto;
+      }
+   }
+   .about_text{
+      @include breakpoint($tablet-small){
+         padding-left: 24px;
+         width: calc(100% - 365px);
+      }
+   }
+}
+.promo_heading{
+   border-radius: 8px;
+   margin: 19px 0 20px;
+   background: url("../images/img_4.jpg") no-repeat;
+   background-size: cover;
+   background-position: 50% 100%;
+   display: flex;
+   flex-wrap: wrap;
+   padding: 20px;
+   @include breakpoint($mobile-small){
+      align-items: center;
+      padding: 30px;
+   }
+   .img_box{
+      width: 54px;
+      @include breakpoint($mobile-small){
+         width: 80px;
+      }
+      img{
+         max-width: 100%;
+         width: auto;
+      }
+   }
+   .promo_title{
+      width: calc(100% - 54px);
+      padding-left: 15px;
+      color: $cl-white;
+      margin: 0;
+      font-size: 20px;
+      @include breakpoint($mobile-small){
+         width: calc(100% - 80px);
+         padding-left: 20px;
+         font-size: 30px;
+      }
+      span{
+         @include breakpoint($mobile-extra-small){
+            display: block;
+         }
+      }
+   }
+}
+.usa_image_home {
+    margin-right: 29px;
+    margin-bottom: 10px;
+    float: left;
+}
