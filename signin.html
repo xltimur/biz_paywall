@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In – Bizprofile</title>
+    <meta name="description" content="Sign in to your Bizprofile account" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/general_new.css" type="text/css" />
+    <link rel="stylesheet" href="css/_footer_new.css" type="text/css" />
+    <link rel="stylesheet" href="css/account_pages.css" type="text/css" />
+</head>
+
+<body class="main account">
+    <header id="header">
+        <div class="container">
+            <div class="innert_head">
+                <strong class="logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
+                <button class="account-burger" type="button" aria-label="Open navigation"></button>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <section class="account-page">
+            <div class="account-page__layout" style="background-image: url('../account-img/Subtract.svg')">
+                <div class="account-card account-card_signin">
+                    <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
+                    <div class="account-card__content" id="signin-default-content">
+                        <h1 class="account-card__title">Enter your info to <span class="account-card__title_accent">Sign In</span></h1>
+                        <p class="account-card__subtitle">Or get started with a new account</p>
+                        <form class="account-form account-form_signin" action="#" method="get">
+                            <div class="account-form__group">
+                                <div class="inpt_lb">
+                                    <label class="label" for="signin-email">Email</label>
+                                    <input id="signin-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+                                </div>
+                            </div>
+                            <a href="#" class="account-form__forgot" id="forgot-email-toggle">Forgot email address?</a>
+                            <button type="submit" class="btn account-btn">Continue</button>
+                        </form>
+                    </div>
+                    <div class="account-card__content" id="signin-valid-email-content" hidden>
+                        <h1 class="account-card__title">Please enter a valid email</h1>
+                        <p class="account-card__subtitle account-card__subtitle_large">
+                            Enter a valid email address and we’ll send you a sign-in link to your email address. Click the link to sign in automatically. If you don’t see the email, check your <span class="account-card__subtitle_strong">spam folder.</span>
+                        </p>
+
+                        <form class="account-form account-form_valid-email" id="valid-email-form" action="#" method="get">
+                            <div class="account-form__group">
+                                <div class="inpt_lb">
+                                    <label class="label" for="valid-email">Email</label>
+                                    <input id="valid-email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+                                </div>
+                            </div>
+                            <button type="submit" class="btn account-btn">Email me</button>
+                        </form>
+                    </div>
+                    <div class="account-card__content" id="signin-confirm-content" hidden>
+                        <h1 class="account-card__title">Check your inbox</h1>
+                        <p class="account-card__subtitle account-card__subtitle_large">Please confirm your email address. We’ve sent an activation link to <span class="account-card__subtitle_strong" id="confirm-email-text">hello.bizprofile@com.</span> Click the link in the email to sign in. Thanks for signing up to Bizprofile, We are happy to have you.</p>
+                        <a href="#" class="btn account-btn">Send Again</a>
+                    </div>
+                    <p class="account-card__terms">
+                        By continuing, you agree to BizProfile’s <a href="https://www.bizprofile.net/terms">Terms of Service</a> and <a href="https://www.bizprofile.net/privacy">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="footer" class="nw_footer">
+        <div class="container">
+            <div class="logo_block">
+                <div class="logo_box">
+                    <strong class="logo"><a href="https://www.bizprofile.net/"></a></strong>
+                </div>
+                <div class="foot_txt">
+                    Bizprofile.net is an online directory offering comprehensive information on
+                    registered business entities across the US
+                </div>
+                <div class="foot_nav">
+                    <ul>
+                        <li><a href="https://www.bizprofile.net/">Home</a></li>
+                        <li><a href="https://www.bizprofile.net/about-us">About</a></li>
+                        <li><a href="https://www.bizprofile.net/contactus">Get in touch</a></li>
+                        <li><a href="https://www.bizprofile.net/sitemap">Sitemap</a></li>
+                    </ul>
+                    <ul class="term_nav">
+                        <li class="email"><a href="mailto:info@bizprofile.net">info@bizprofile.net</a></li>
+                        <li><a href="https://www.bizprofile.net/privacy">Privacy policy</a></li>
+                        <li><a href="https://www.bizprofile.net/terms">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy_box">
+                <div class="copy">© 2025 Bizprofile, Inc. All rights reserved</div>
+                <div class="soc_box">
+                    <span class="txt">Follow us</span>
+                    <ul class="soc_list">
+                        <li><a href="#" class="fb"></a></li>
+                        <li><a href="#" class="twt"></a></li>
+                        <li><a href="#" class="thd"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var forgotEmailToggle = document.getElementById("forgot-email-toggle");
+            var defaultContent = document.getElementById("signin-default-content");
+            var validEmailContent = document.getElementById("signin-valid-email-content");
+            var confirmContent = document.getElementById("signin-confirm-content");
+            var signinEmailInput = document.getElementById("signin-email");
+            var validEmailInput = document.getElementById("valid-email");
+            var validEmailForm = document.getElementById("valid-email-form");
+            var confirmEmailText = document.getElementById("confirm-email-text");
+
+            if (!forgotEmailToggle || !defaultContent || !validEmailContent || !confirmContent || !validEmailForm) {
+                return;
+            }
+
+            forgotEmailToggle.addEventListener("click", function (event) {
+                event.preventDefault();
+                defaultContent.hidden = true;
+                validEmailContent.hidden = false;
+
+                if (signinEmailInput && validEmailInput && signinEmailInput.value) {
+                    validEmailInput.value = signinEmailInput.value;
+                }
+
+                if (validEmailInput) {
+                    validEmailInput.focus();
+                }
+            });
+
+            validEmailForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                validEmailContent.hidden = true;
+                confirmContent.hidden = false;
+
+                if (confirmEmailText && validEmailInput && validEmailInput.value) {
+                    confirmEmailText.textContent = validEmailInput.value;
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>

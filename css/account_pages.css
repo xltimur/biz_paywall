@@ -1,0 +1,395 @@
+.account {
+  background: #eef3fc;
+}
+
+.account #header {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-page__layout {
+  padding: 17px 20px;
+  background-repeat: no-repeat;
+  background-position: 101% 0;
+}
+
+.account-card {
+  width: 775px;
+  min-height: 840px;
+  padding: 30px 80px 40px;
+  border-radius: 20px;
+  background: #fcfcfc;
+  box-shadow: 0 84px 250px rgba(7, 33, 102, 0.12);
+}
+
+.account-card .account-card__logo {
+  display: block;
+  width: 120px;
+  height: 62px;
+  margin: 0;
+  background: url("../images/logo.svg") no-repeat left top;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.account-card .account-card__logo a {
+  display: block;
+  height: 100%;
+}
+
+.account-card__content {
+  max-width: 595px;
+  padding-top: 142px;
+}
+
+.account-card__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 1.5;
+  color: #0d0d0d;
+}
+
+.account-card__title_accent {
+  color: #3d52e1;
+}
+
+.account-card__title_success {
+  color: #1cbf3a;
+}
+
+.account-card__subtitle {
+  margin: 0 0 45px;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #0d0d0d;
+}
+
+.account-card__subtitle_large {
+  max-width: 560px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.account-card__subtitle_strong {
+  font-weight: 600;
+}
+
+
+.account-form {
+  width: 595px;
+}
+
+.account-form_signin {
+  margin-top: 30px;
+}
+
+.account-form_signup {
+  margin-top: 30px;
+}
+
+.account-form_valid-email {
+  margin-top: 46px;
+}
+
+.account-form__group {
+  margin-bottom: 21px;
+}
+
+.account-form__group:last-of-type {
+  margin-bottom: 0;
+}
+
+.account-form .inpt_lb {
+  position: relative;
+  margin: 0 0 20px;
+  width: 100%;
+  border: 1px solid #0d0d0d;
+  border-radius: 8px;
+  background: #fcfcfc;
+}
+
+.account-form .inpt_lb .label {
+  position: absolute;
+  top: -16px;
+  left: 13px;
+  padding: 0 5px;
+  margin: 0;
+  background: #fcfcfc;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #0d0d0d;
+}
+
+.account-form .inpt_lb input {
+  display: block;
+  width: 100%;
+  height: 55px;
+  padding: 14px 17px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #0d0d0d;
+}
+
+.account-form .inpt_lb input::placeholder {
+  color: #a2a2a2;
+}
+
+.account-form .inpt_lb input:focus::placeholder {
+  color: transparent;
+}
+
+.account-form .inpt_lb input:focus {
+  outline: none;
+}
+
+.account-form .inpt_lb:focus-within {
+  border-color: #3d52e1;
+}
+
+
+
+.account-form__field_password input {
+  padding-right: 52px;
+}
+
+.account-form__toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230d0d0d' stroke-width='1.7'%3E%3Cpath d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E") no-repeat center;
+  transform: translateY(-50%);
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
+.account-form__toggle[aria-pressed="true"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230d0d0d' stroke-width='1.7'%3E%3Cpath d='M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24'/%3E%3Cline x1='1' y1='1' x2='23' y2='23'/%3E%3C/svg%3E");
+}
+
+.account-form__forgot {
+  display: block;
+  margin: -10px 0 20px;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: right;
+  color: #3d52e1;
+  text-decoration: none;
+}
+
+.account-form__forgot:hover {
+  text-decoration: underline;
+}
+
+.account-btn {
+  width: 595px;
+  height: 69px;
+  padding: 17px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.account-card .account-btn,
+.account-card .account-btn:hover {
+  color: #fcfcfc;
+}
+
+.account-card__terms {
+  width: 587px;
+  margin: 20px 0 0;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #a2a2a2;
+}
+
+.account-card__terms a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.account-card__terms a:hover {
+  text-decoration: none;
+}
+
+.account-success__icon {
+  width: 101px;
+  height: 101px;
+  margin: 0;
+  border-radius: 101px;
+  background: rgba(28, 191, 58, 0.23);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-success__icon::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='76' viewBox='0 0 76 76' fill='none'%3E%3Ccircle cx='38' cy='38' r='38' fill='%231cbf3a'/%3E%3Cpath d='M22 38l12 12 24-24' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+  background-size: contain;
+}
+
+.account-success__text {
+  width: 575px;
+  margin: 21px 0 30px;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #0d0d0d;
+}
+
+.account-success__head {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+
+.account-card_valid-email .account-btn {
+  margin-top: 20px;
+}
+
+.account-burger {
+  display: none;
+}
+
+@media only screen and (max-width: 639px) {
+  .account #header {
+    display: block;
+    padding: 35px 0 20px;
+  }
+
+  .account #header .container {
+    max-width: 375px;
+    padding: 0 20px;
+  }
+
+  .account #header .innert_head {
+    align-items: center;
+  }
+
+  .account #header .logo {
+    width: 81px;
+    height: 43px;
+    margin-right: 0;
+  }
+
+  .account-burger {
+    display: block;
+    width: 30px;
+    height: 16px;
+    padding: 0;
+    border: none;
+    background:
+      linear-gradient(#3d52e1, #3d52e1) center top / 30px 2px no-repeat,
+      linear-gradient(#3d52e1, #3d52e1) center center / 30px 2px no-repeat,
+      linear-gradient(#3d52e1, #3d52e1) center bottom / 30px 2px no-repeat;
+    cursor: pointer;
+  }
+
+  .account-page {
+    padding-top: 0;
+  }
+
+  .account-page > .container {
+    max-width: 375px;
+  }
+
+  .account-card .account-card__logo {
+    display: none;
+  }
+
+  .account-card__title {
+    font-size: 28px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .account-card__title_success {
+    font-size: 38px;
+  }
+
+  .account-card__subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .account-card__subtitle_large {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+
+  .account-form_signin,
+  .account-form_signup,
+  .account-form_valid-email {
+    margin-top: 30px;
+  }
+
+  .account-card_valid-email .account-btn {
+    margin-top: 0;
+  }
+
+  .account-form__group {
+    margin-bottom: 16px;
+  }
+
+  .account-form .inpt_lb .label {
+    top: -15px;
+    left: 13px;
+    font-size: 16px;
+  }
+
+  .account-form .inpt_lb input {
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .account-form__forgot {
+    margin: 8px 0 20px;
+    font-size: 16px;
+  }
+
+  .account-btn {
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .account-card__terms {
+    max-width: 265px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .account-success__icon {
+    margin: 35px auto 20px;
+  }
+
+  .account-success__head {
+    display: block;
+  }
+
+  .account-success__text {
+    width: 242px;
+    margin: 18px auto 31px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
