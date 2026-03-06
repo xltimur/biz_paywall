@@ -1,0 +1,14 @@
+---
+description: Meta-rule for when and how to update ./docs and .cursor/rules; how to create .mdc files correctly.
+alwaysApply: true
+globs:
+---
+
+# Rules and docs maintenance
+
+- Treat ./docs/*.md as the single source of truth. See ./docs/00-overview.md and ./docs/01-architecture.md for project shape and boundaries.
+- **When to update ./docs**: Only after tasks that introduce **substantial** changes: new core modules or bounded contexts, changed data flow or cross-cutting concerns, changes to public APIs or contracts (e.g. linkMore, paywall HTML contract), or major introduction/removal of external services. Do NOT update docs for minor refactors or trivial edits.
+- **When to update or create .cursor/rules**: When such substantial changes affect architecture, patterns, or constraints (e.g. new entrypoints, new integration layer, new shared component patterns). Preserve prior intent: adjust or extend existing rules; do not overwrite or delete rules blindly.
+- Before changing docs or rules: search the codebase and ./docs for existing patterns; read existing .cursor/rules/*.mdc to avoid duplicates or conflicts. If MCP context7 (or the configured MCP search/documentation tool) is available, use it to inspect the repo and docs before modifying.
+- **Creating .mdc files**: Place files under .cursor/rules/ with valid YAML frontmatter (description, globs, alwaysApply). Keep bodies concise with actionable bullets. Reference specific docs (e.g. ./docs/03-reuse-catalog.md) instead of restating them.
+- Any docs or rules update must be minimal, precise, and clearly reference what changed and where. Stay consistent with the existing structure in ./docs and .cursor/rules.

@@ -1,0 +1,12 @@
+---
+description: HTML page structure, header/footer, and entrypoint conventions.
+globs: *.html, **/*.html
+alwaysApply: false
+---
+
+# HTML pages
+
+- Follow structure from ./docs/02-conventions.md: header (#header) → .container → .innert_head → logo and search form or nav; main (#main) → section.inner_section → .container; footer (#footer.nw_footer) → .container → .logo_block, .copy_box.
+- Do not remove or rename #header, #main, #footer, #dialog-content, or script-target IDs (#officer_items, #annualReport_items). See ./docs/03-reuse-catalog.md and validation checklist.
+- Use semantic sections (header, main, footer, section) and BEM-like class names. Internal links must follow existing path style (/search, /about-us, /contactus). See ./docs/05-style-and-anti-patterns.md.
+- For new pages: reuse the same head/footer pattern and CSS link order (general, then feature, then paywall.css if the page has gated content).

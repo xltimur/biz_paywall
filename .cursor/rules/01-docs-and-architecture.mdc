@@ -1,0 +1,12 @@
+---
+description: Use ./docs as primary context; respect architecture and boundaries from docs.
+alwaysApply: true
+globs:
+---
+
+# Docs and architecture
+
+- Use ./docs as the primary context for how this project works. Start from ./docs/00-overview.md for stack, entrypoints, and data flow.
+- Follow the layering and module boundaries in ./docs/01-architecture.md. This repo is frontend-only (HTML, SCSS/CSS, JS); no backend, DB, queues, or workers in-repo.
+- Entrypoints are exactly landing.html, company.html, search.html. New pages must reuse the same header/footer structure and CSS link order (general → feature → paywall if needed). Do not introduce an SPA router.
+- Do not invent new features, APIs, or persistence layers beyond what the user requests and what fits existing patterns described in ./docs.

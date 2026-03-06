@@ -1,0 +1,11 @@
+---
+description: External services and config; do not add integrations without agreement.
+globs:
+alwaysApply: false
+---
+
+# Integrations and config
+
+- This repo references bizprofile.net (main site, forms, XHR), static.bizprofile.net (PDFs), CDN (Fancybox, jQuery), and Google Fonts. No REST client, Stripe, or API SDK in-repo. See ./docs/04-integrations-and-infra.md.
+- Do not add new external services, env-based config, or API clients without tech-lead agreement. Forms and link-more XHR target the same origin; do not assume backend APIs or persistence not present in the repo.
+- When adding or changing links to external hosts, keep usage consistent with current patterns (e.g. rel="nofollow" on PDF links). New routes or form actions require backend support; do not point forms or critical links to unimplemented URLs.

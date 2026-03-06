@@ -1,0 +1,12 @@
+---
+description: JS naming, jQuery usage, linkMore contract, and inline scripts.
+globs: js/**/*.js
+alwaysApply: false
+---
+
+# JavaScript
+
+- File names: lowercase with hyphen (e.g. link-more.js). See ./docs/02-conventions.md.
+- Use jQuery for DOM/events where the page already depends on it: $(document).ready(...) or jQuery(function ($) { ... }); use .on('click touchstart', ...) for touch when needed. See ./docs/02-conventions.md.
+- For "load more": use linkMore(item) with element attributes page, child-type, and data-recipient. Backend contract: GET /{childType}?page=N returns HTML fragment; optional hasMore on root node. Do not introduce a different load-more mechanism without a documented reason. See ./docs/03-reuse-catalog.md and ./docs/02-conventions.md.
+- Inline scripts (in HTML): use only for page-specific behavior (e.g. sticky paywall, Fancybox bind); keep short and in English. See ./docs/05-style-and-anti-patterns.md.

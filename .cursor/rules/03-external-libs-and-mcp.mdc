@@ -1,0 +1,11 @@
+---
+description: Use MCP context7 for external libs not in ./docs or repo; do not guess APIs.
+alwaysApply: true
+globs:
+---
+
+# External libraries and MCP
+
+- When using external libraries, packages, or tools that are not clearly documented in ./docs or have no existing usage examples in the repo, use MCP context7 (or the configured MCP search/documentation tool) to fetch official documentation or reliable references and align usage with real APIs and best practices. Do not guess function signatures, options, or behaviors.
+- If MCP context7 is not available at runtime, clearly mark missing information in your response and do not fabricate details. Prefer pointing to the need for official docs over inventing usage.
+- This repo uses jQuery 3.7.x, Fancybox 6.1, Swiper, and link-more.js for XHR "load more". Do not introduce new libraries for the same purposes without tech-lead agreement. See ./docs/00-overview.md and ./docs/04-integrations-and-infra.md.

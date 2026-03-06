@@ -1,0 +1,13 @@
+---
+description: DRY, English-only, no magic numbers, clear naming; conventions from docs.
+alwaysApply: true
+globs:
+---
+
+# Global code quality
+
+- Enforce DRY: before adding markup or styles, check ./docs/03-reuse-catalog.md and reuse existing shared components (header, footer, container, section_box, result_list, contact_list, buttons) and utilities (breakpoint mixin, color variables). Do not duplicate paywall structure or header/footer markup.
+- No magic numbers: use variables from scss/_parametrs_new.scss ($container, $mobile, $tablet, $cl-*, etc.) for layout and colors. See ./docs/02-conventions.md and ./docs/05-style-and-anti-patterns.md.
+- All comments, inline docs, and suggested commit messages must be in English. Do not add Russian or other-language comments unless explicitly required for localization.
+- Use clear, descriptive names: BEM-like classes (e.g. .paywall-wrapper, .result_item) and camelCase for JS (e.g. initMobMenu, linkMore). Avoid cryptic or misleading names. See ./docs/05-style-and-anti-patterns.md.
+- Use classes and SCSS for layout and theme; do not use inline style for typography, spacing, or design-system colors (inline style only for hidden popups or documented one-offs).

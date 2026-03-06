@@ -1,0 +1,11 @@
+---
+description: Paywall markup and SCSS; load-more contract; cross-page consistency.
+globs: *.html, scss/paywall.scss, css/paywall.css, js/link-more.js
+alwaysApply: false
+---
+
+# Paywall and load more
+
+- Paywalled blocks must use .paywall-wrapper (add .not_sticky on company-style pages), inner content block (.paywall-contacts, .paywall-filing, .paywall-table or new class), then .paywall-overlay and .paywall-popup (heading, .price_txt, .btn). Reuse paywall.scss; do not invent a different paywall layout. See ./docs/03-reuse-catalog.md and ./docs/02-conventions.md.
+- When adding or renaming gated blocks, update JSON-LD cssSelector if schema is used. See ./docs/06-versioning-and-evolution.md.
+- Structural changes to paywall, header, or footer must be applied consistently across landing.html, company.html, and search.html and must update shared partials or document exceptions. See ./docs/05-style-and-anti-patterns.md.

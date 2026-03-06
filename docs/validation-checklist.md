@@ -1,0 +1,18 @@
+1. [YES] We use HTML5 static files, SCSS (compiled to CSS), and design tokens in `scss/_parametrs_new.scss`, and new code MUST follow this pattern.
+2. [YES] We use jQuery 3.7.x, Fancybox 6.1 (landing), Swiper (carousels), and `link-more.js` for XHR “load more”, and new code MUST use these rather than introducing new libs for the same purpose.
+3. [YES] We use only three full-page entrypoints—`landing.html`, `company.html`, `search.html`—with no SPA router, and new pages MUST reuse the same header/footer structure and CSS link order (general → feature → paywall if needed).
+4. [YES] We use a frontend-only repo (no backend, DB, queues, or workers in-repo); forms and XHR target the same origin (bizprofile.net), and new code MUST NOT assume APIs or persistence that are not in the repo.
+5. [YES] We use `.paywall-wrapper` + `.paywall-overlay` + `.paywall-popup` and `paywall.scss` for all gated blocks, and new paywalled content MUST use this structure and existing SCSS.
+6. [YES] We use SCSS partials prefixed with `_`, entry files import `_parametrs_new` (or `_parametrs`) first, and responsive rules use the `breakpoint($rule)` mixin with variables from `_parametrs_new.scss`, and new SCSS MUST follow this pattern.
+7. [YES] We use `linkMore(item)` with element attributes `page`, `child-type`, and `data-recipient` and GET `/{childType}?page=N` for “load more”, and new load-more sections MUST use this contract and MUST NOT introduce a different mechanism without a documented reason.
+8. [YES] We use `#header`, `#main`, `#footer`, `.paywall-wrapper`, `#dialog-content`, and script-target IDs like `#officer_items` / `#annualReport_items`, and new code MUST NOT remove or rename these where scripts depend on them.
+9. [YES] We use `$container`, `$mobile`, `$tablet`, `$cl-*` and other variables from `_parametrs_new.scss` for layout and colors, and new code MUST use these instead of magic numbers.
+10. [YES] We require all new comments and inline documentation to be in English, and new or updated JSON-LD/script comments MUST NOT be in Russian or other languages unless explicitly required for localization.
+11. [YES] We use BEM-like class names (e.g. `.paywall-wrapper`, `.result_item`) and clear camelCase for JS (e.g. `initMobMenu`, `linkMore`), and new code MUST avoid cryptic or misleading names.
+12. [YES] We use existing shared components (header, footer, container, section_box, result_list, contact_list, buttons) and utilities (breakpoint mixin, color variables), and new code MUST reuse them instead of duplicating markup or styles.
+13. [YES] We use no `.env` or config files; URLs and theme are in HTML/SCSS and `_parametrs_new.scss`, and new code MUST NOT introduce env-based config without tech-lead agreement.
+14. [YES] We use no REST client, Stripe, or API SDK in-repo; forms and link-more XHR target the same origin, and new code MUST NOT add such integrations without tech-lead agreement.
+15. [YES] We use JS file names with lowercase and hyphen (e.g. `link-more.js`) and place assets in themed folders (`paywall_img/`, `landing_img/`, etc.), and new files MUST follow this naming and placement.
+16. [YES] We treat structural changes to header, footer, or paywall as cross-page; such changes MUST be applied consistently across landing, company, and search and MUST update shared partials or document exceptions.
+17. [YES] We use inline scripts only for page-specific behavior (e.g. sticky paywall, Fancybox bind), keep them short and in English, and new inline scripts MUST follow this pattern.
+18. [YES] We use classes and SCSS for layout and theme; inline `style` is only for hidden popups or documented one-offs, and new code MUST NOT use inline styles for typography, spacing, or design-system colors.

@@ -1,0 +1,12 @@
+---
+description: SCSS partials, imports, breakpoints, and design tokens.
+globs: scss/**/*.scss, css/**/*.css
+alwaysApply: false
+---
+
+# SCSS and CSS
+
+- SCSS partials must be prefixed with _. Entry or feature files have no leading underscore. Entry files import _parametrs_new (or _parametrs) first, then fonts/reset, then components. See ./docs/02-conventions.md.
+- Use the breakpoint($rule) mixin from _parametrs_new.scss with variables ($mobile-extra-small, $mobile-small, $mobile, $tablet-small, $tablet, etc.) for all responsive rules. Do not hardcode breakpoint values. See ./docs/03-reuse-catalog.md.
+- Use color and layout variables from _parametrs_new.scss ($cl-*, $container, $max-container, $font-family). No magic numbers for colors or layout. See ./docs/05-style-and-anti-patterns.md.
+- New shared styles: create partial _*.scss or feature file; import _parametrs_new; use variables and breakpoint() mixin. Keep nesting to 3–4 levels.
