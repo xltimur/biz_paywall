@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/account_pages.css" type="text/css" />
 </head>
 
-<body class="main new_promo account-shell">
+<body class="main account">
     <header id="header">
         <div class="container">
             <div class="innert_head">
@@ -28,50 +28,43 @@
     </header>
 
     <div id="main">
-        <section class="inner_section account-page">
-            <div class="container">
-                <div class="account-page__layout">
-                    <div class="account-page__left">
-                        <div class="account-card account-card_signup">
-                            <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
-                            <div class="account-card__content account-card__content_signup">
-                                <h1 class="account-card__title">Enter your info to <span class="account-card__title_accent">Sign Up</span></h1>
-                                <p class="account-card__subtitle">Enter your information so we know how to address you</p>
+        <div class="account-page__layout" style="background-image: url('../account-img/Subtract.svg')">
+            <div class="account-card">
+                <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
+                <div class="account-card__content">
+                    <h1 class="account-card__title">Enter your info to <span class="account-card__title_accent">Sign Up</span></h1>
+                    <p class="account-card__subtitle">Enter your information so we know how to address you</p>
 
-                                <form class="account-form account-form_signup" action="signup-success.html" method="get">
-                                    <div class="account-form__group">
-                                        <div class="account-form__field inpt_lb">
-                                            <label class="label" for="signup-name">Your name</label>
-                                            <input id="signup-name" type="text" name="name" placeholder="Enter your first name" autocomplete="name" required />
-                                        </div>
-                                    </div>
-                                    <div class="account-form__group">
-                                        <div class="account-form__field account-form__field_password inpt_lb">
-                                            <label class="label" for="signup-password">Create your password</label>
-                                            <input id="signup-password" type="password" name="password" placeholder="Enter password (at least 8 characters)" autocomplete="new-password" required minlength="8" />
-                                            <button type="button" class="account-form__toggle" aria-label="Show password" aria-pressed="false">Show password</button>
-                                        </div>
-                                    </div>
-                                    <div class="account-form__group">
-                                        <div class="account-form__field account-form__field_password inpt_lb">
-                                            <label class="label" for="signup-confirm">Confirm password</label>
-                                            <input id="signup-confirm" type="password" name="confirm" placeholder="Enter password" autocomplete="new-password" required minlength="8" />
-                                            <button type="button" class="account-form__toggle" aria-label="Show password" aria-pressed="false">Show password</button>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn account-btn">Continue</button>
-                                </form>
-
-                                <p class="account-card__terms">
-                                    By continuing, you agree to BizProfile’s <a href="https://www.bizprofile.net/terms">Terms of Service</a> and <a href="https://www.bizprofile.net/privacy">Privacy Policy</a>
-                                </p>
+                    <form class="account-form account-form_signup" action="signup-success.html" method="get">
+                        <div class="account-form__group">
+                            <div class="account-form__field inpt_lb">
+                                <label class="label" for="signup-name">Your name</label>
+                                <input id="signup-name" type="text" name="name" placeholder="Enter your first name" autocomplete="name" required />
                             </div>
                         </div>
-                    </div>
-                    <div class="account-page__right" aria-hidden="true"></div>
+                        <div class="account-form__group">
+                            <div class="account-form__field account-form__field_password inpt_lb">
+                                <label class="label" for="signup-password">Create your password</label>
+                                <input id="signup-password" type="password" name="password" placeholder="Enter password (at least 8 characters)" autocomplete="new-password" required minlength="8" />
+                                <button type="button" class="account-form__toggle" aria-label="Show password" aria-pressed="false">Show password</button>
+                            </div>
+                        </div>
+                        <div class="account-form__group">
+                            <div class="account-form__field account-form__field_password inpt_lb">
+                                <label class="label" for="signup-confirm">Confirm password</label>
+                                <input id="signup-confirm" type="password" name="confirm" placeholder="Enter password" autocomplete="new-password" required minlength="8" />
+                                <button type="button" class="account-form__toggle" aria-label="Show password" aria-pressed="false">Show password</button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn account-btn">Continue</button>
+                    </form>
+
+                    <p class="account-card__terms">
+                        By continuing, you agree to BizProfile’s <a href="https://www.bizprofile.net/terms">Terms of Service</a> and <a href="https://www.bizprofile.net/privacy">Privacy Policy</a>
+                    </p>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 
     <footer id="footer" class="nw_footer">

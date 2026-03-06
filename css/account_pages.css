@@ -15,9 +15,11 @@
 }
 
 .account-card {
-  width: 775px;
+  max-width: 775px;
   min-height: 840px;
-  padding: 30px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 5.3% 40px 4.2%;
   border-radius: 20px;
   background: #fcfcfc;
   box-shadow: 0 84px 250px rgba(7, 33, 102, 0.12);
@@ -39,9 +41,9 @@
   height: 100%;
 }
 
+.account-card__content-wrapper,
 .account-card__content {
-  max-width: 595px;
-  padding-top: 142px;
+  margin: auto 0;
 }
 
 .account-card__title {
@@ -78,9 +80,6 @@
 }
 
 
-.account-form {
-  width: 595px;
-}
 
 .account-form_signin {
   margin-top: 30px;
@@ -134,23 +133,32 @@
   font-size: 18px;
   line-height: 1.4;
   color: #0d0d0d;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .account-form .inpt_lb input::placeholder {
   color: #a2a2a2;
 }
 
-.account-form .inpt_lb input:focus::placeholder {
-  color: transparent;
-}
-
 .account-form .inpt_lb input:focus {
   outline: none;
+}
+
+.account-form .inpt_lb input:-webkit-autofill,
+.account-form .inpt_lb input:-webkit-autofill:hover,
+.account-form .inpt_lb input:-webkit-autofill:focus,
+.account-form .inpt_lb input:-webkit-autofill:active {
+  -webkit-text-fill-color: #0d0d0d;
+  -webkit-box-shadow: 0 0 0 1000px #fcfcfc inset;
+  box-shadow: 0 0 0 1000px #fcfcfc inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
 
 .account-form .inpt_lb:focus-within {
   border-color: #3d52e1;
 }
+
 
 
 
@@ -191,7 +199,6 @@
 }
 
 .account-btn {
-  width: 595px;
   height: 69px;
   padding: 17px 20px;
   border: none;
