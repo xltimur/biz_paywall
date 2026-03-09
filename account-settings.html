@@ -20,18 +20,41 @@
 <body class="main account-settings">
     <header id="header" class="account-settings__header">
         <div class="container account-settings__header-inner">
-            <strong class="logo"><a href="https://www.bizprofile.net/"></a></strong>
+            <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
             <div class="account-settings__header-right">
                 <a href="https://www.bizprofile.net/pricing" class="account-settings__pricing">Pricing</a>
                 <div class="account-settings__avatar">GS</div>
             </div>
+            <button class="account-burger" type="button" aria-label="Open navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="account-dropdown" id="account-dropdown">
+                <div class="account-dropdown__avatar">GS</div>
+                <div class="account-dropdown__divider"></div>
+                <ul class="account-dropdown__nav">
+                    <li><a href="https://www.bizprofile.net/about-us">About Us</a></li>
+                    <li><a href="https://www.bizprofile.net/pricing">Pricing</a></li>
+                    <li><a href="https://www.bizprofile.net/contactus">Contact Us</a></li>
+                </ul>
+                <div class="account-dropdown__divider"></div>
+                <button type="button" class="account-dropdown__logout">
+                    <span>Logout</span>
+                    <img src="account-img/icon-logout.svg" alt="" width="13" height="14" />
+                </button>
+            </nav>
         </div>
     </header>
     <div id="main">
         <div class="container">
             <div class="account-settings__layout">
                 <aside class="account-settings__sidebar">
-                    <h2 class="account-settings__sidebar-title">My Account</h2>
+                    <div class="account-settings__title-row">
+                        <h2 class="account-settings__sidebar-title">My Account</h2>
+                        <button type="button" class="account-settings__logout">
+                            <span>Logout</span>
+                            <img src="account-img/icon-logout.svg" alt="" width="13" height="14" class="account-settings__logout-icon" />
+                        </button>
+                    </div>
                     <nav class="account-settings__nav">
                         <a href="#" class="account-settings__nav-item account-settings__nav-item_active">
                             <img src="account-img/icon-profile.svg" alt="" width="24" height="24" class="account-settings__nav-icon" />
@@ -44,13 +67,9 @@
                     </nav>
                 </aside>
                 <div class="account-settings__content">
-                    <div class="account-settings__title-row">
-                        <h1 class="account-settings__page-title">Personal Settings</h1>
-                        <button type="button" class="account-settings__logout">
-                            <span>Logout</span>
-                            <img src="account-img/icon-logout.svg" alt="" width="13" height="14" class="account-settings__logout-icon" />
-                        </button>
-                    </div>
+
+                <h1 class="account-settings__page-title">Personal Settings</h1>
+
 
                     <form class="account-form account-form_settings">
                         <div class="account-form__group">
@@ -82,15 +101,15 @@
                     </form>
 
                     <section class="account-settings__section">
-                        <h2 class="account-settings__section-title">Privacy settings</h2>
+                        <h2 class="account-settings__page-title">Privacy settings</h2>
                         <a href="#" class="account-settings__privacy-link">Manage how BizProfile uses data</a>
                         <p class="account-settings__privacy-desc">Manage how we collect, use, and protect your data.</p>
                     </section>
 
                     <section class="account-settings__section">
-                        <h2 class="account-settings__section-title">Delete Personal Account</h2>
-                        <div class="inpt_lb account-settings__delete-input">
-                            <input type="text" placeholder="This action is irreversible, please make sure you're certain of it" readonly />
+                        <h2 class="account-settings__page-title">Delete Personal Account</h2>
+                        <div class=" account-settings__delete-input">
+                            <span>This action is irreversible, please make sure you're certain of it</span>
                             <button type="button" class="account-settings__delete-btn">Delete Account</button>
                         </div>
                     </section>
@@ -141,6 +160,7 @@ Bizprofile.net is an online directory offering comprehensive information on
             </div>
         </div>
     </footer>
+    <script src="js/account-pages.js"></script>
 </body>
 
 </html>
