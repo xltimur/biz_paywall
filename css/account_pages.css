@@ -11,7 +11,7 @@
 .account-page__layout {
   padding: 17px 20px;
   background-repeat: no-repeat;
-  background-position: 101% 0;
+  background-position: 100% 0;
 }
 
 .account-card {
@@ -94,6 +94,7 @@
 }
 
 .account-form__group {
+  position: relative;
   margin-bottom: 21px;
 }
 
@@ -157,6 +158,41 @@
 
 .account-form .inpt_lb:focus-within {
   border-color: #3d52e1;
+}
+
+.account-form .inpt_lb.inpt_lb_error {
+  border-color: #eb5757;
+}
+
+.account-form .inpt_lb.inpt_lb_error .label {
+  color: #eb5757;
+}
+
+.account-form .inpt_lb.inpt_lb_error input {
+  padding-right: 52px;
+}
+
+.inpt_lb__error-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-form__error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 5px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #eb5757;
 }
 
 
