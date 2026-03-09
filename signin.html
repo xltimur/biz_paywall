@@ -21,7 +21,23 @@
     <header id="header">
         <div class="container">
             <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
-            <button class="account-burger" type="button" aria-label="Open navigation"></button>
+            <button class="account-burger" type="button" aria-label="Open navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="account-dropdown" id="account-dropdown">
+                <div class="account-dropdown__avatar">GS</div>
+                <div class="account-dropdown__divider"></div>
+                <ul class="account-dropdown__nav">
+                    <li><a href="https://www.bizprofile.net/about-us">About Us</a></li>
+                    <li><a href="https://www.bizprofile.net/pricing">Pricing</a></li>
+                    <li><a href="https://www.bizprofile.net/contactus">Contact Us</a></li>
+                </ul>
+                <div class="account-dropdown__divider"></div>
+                <button type="button" class="account-dropdown__logout">
+                    <span>Logout</span>
+                    <img src="account-img/icon-logout.svg" alt="" width="13" height="14" />
+                </button>
+            </nav>
         </div>
     </header>
     <div id="main">
@@ -116,6 +132,23 @@
         </div>
     </footer>
     <script>
+        (function () {
+            var burger = document.querySelector(".account-burger");
+            var dropdown = document.getElementById("account-dropdown");
+            if (burger && dropdown) {
+                burger.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    burger.classList.toggle("is-active");
+                    dropdown.classList.toggle("is-open");
+                });
+                document.addEventListener("click", function (e) {
+                    if (!dropdown.contains(e.target) && !burger.contains(e.target)) {
+                        burger.classList.remove("is-active");
+                        dropdown.classList.remove("is-open");
+                    }
+                });
+            }
+        })();
         (function () {
             var forgotEmailToggle = document.getElementById("forgot-email-toggle");
             var defaultContent = document.getElementById("signin-default-content");
