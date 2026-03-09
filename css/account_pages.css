@@ -888,6 +888,14 @@
     max-width: 100%;
   }
 }
+@media only screen and (max-width: 991px) {
+  .account-settings .account-settings__layout {
+    display: block;
+  }
+  .account-settings #header .logo {
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 767px) {
   .account #header {
     display: block;

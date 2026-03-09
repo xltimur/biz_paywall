@@ -154,33 +154,7 @@
         </div>
     </footer>
 
-    <script>
-        (function () {
-            var toggles = document.querySelectorAll('.account-form__toggle');
-            toggles.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    var wrap = this.closest('.account-form__field_password');
-                    var input = wrap ? wrap.querySelector('input') : null;
-                    if (!input) return;
-                    var isPassword = input.type === 'password';
-                    input.type = isPassword ? 'text' : 'password';
-                    this.setAttribute('aria-pressed', isPassword ? 'true' : 'false');
-                    this.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
-                });
-            });
-
-            var signupForm = document.querySelector('.account-form_signup');
-            var signupSuccess = document.querySelector('.account-card_success');
-
-            if (signupForm && signupSuccess) {
-                signupForm.addEventListener('submit', function (event) {
-                    event.preventDefault();
-                    signupForm.hidden = true;
-                    signupSuccess.hidden = false;
-                });
-            }
-        })();
-    </script>
+    <script src="js/account-pages.js"></script>
 </body>
 
 </html>
