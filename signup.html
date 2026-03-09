@@ -18,20 +18,33 @@
 </head>
 
 <body class="main account">
-    <header id="header">
-        <div class="container">
-            <div class="innert_head">
-                <strong class="logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
-                <button class="account-burger" type="button" aria-label="Open navigation"></button>
-            </div>
-        </div>
-    </header>
+<header id="header">
+    <div class="container">
+        <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
+        <button class="account-burger" type="button" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="account-dropdown" id="account-dropdown">
+            <div class="account-dropdown__avatar">GS</div>
+            <div class="account-dropdown__divider"></div>
+            <ul class="account-dropdown__nav">
+                <li><a href="https://www.bizprofile.net/about-us">About Us</a></li>
+                <li><a href="https://www.bizprofile.net/pricing">Pricing</a></li>
+                <li><a href="https://www.bizprofile.net/contactus">Contact Us</a></li>
+            </ul>
+            <div class="account-dropdown__divider"></div>
+            <button type="button" class="account-dropdown__logout">
+                <span>Logout</span>
+                <img src="account-img/icon-logout.svg" alt="" width="13" height="14" />
+            </button>
+        </nav>
+    </div>
+</header>
 
     <div id="main">
         <div class="account-page__layout" style="background-image: url('../account-img/Subtract.svg')">
             <div class="container">
                 <div class="account-card">
-                    <strong class="account-card__logo"><a href="https://www.bizprofile.net/">Bizprofile</a></strong>
                     <div class="account-card__content">
                         <form class="account-form account-form_signup" action="signup-success.html" method="get">
                             <h1 class="account-card__title">Enter your info to <span class="account-card__title_accent">Sign Up</span></h1>
@@ -100,11 +113,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
     <footer id="footer" class="nw_footer">
         <div class="container">
             <div class="logo_block">

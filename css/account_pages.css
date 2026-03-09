@@ -93,9 +93,6 @@
   margin-top: 30px;
 }
 
-.account-form_signup {
-  margin-top: 30px;
-}
 
 .account-form_valid-email {
   margin-top: 46px;
@@ -375,7 +372,6 @@
 }
 
 .account-success__text {
-  width: 575px;
   margin: 21px 0 30px;
   font-size: 22px;
   line-height: 1.4;
@@ -932,10 +928,12 @@
 
   .account-card__title {
     font-size: 28px;
+    margin: 0 0 5px;
   }
 
   .account-card__subtitle {
     font-size: 18px;
+    line-height: 1.2;
   }
 
   .account-form .inpt_lb .label {
@@ -953,7 +951,35 @@
   .account-card__terms {
     font-size: 16px;
   }
+  .account-form__field_password-strength {
+    margin: 0!important;
+  }
 
+  .account-form__strength {
+    gap: 0;
+  }
+
+  .account-card__content_success {
+    padding: 38px 0 0;
+  }
+
+  .account-success__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .account-card__title {
+    font-size: 38px;
+  }
+
+  .account-success__text {
+    text-align: center;
+    margin: 14px 25px 30px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
 }
 
 
