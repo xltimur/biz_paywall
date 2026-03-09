@@ -882,6 +882,10 @@
     display: none;
   }
 
+  .account-settings .account-burger {
+    display: flex;
+  }
+
   .account-settings__sidebar {
     width: 100%;
     padding: 0;
