@@ -1,3 +1,151 @@
+.header-alt #header {
+  padding: 30px 0;
+  margin: 0;
+}
+
+.header-alt #header .logo {
+  width: 116px;
+  height: 59px;
+  flex-shrink: 0;
+}
+
+.header-alt #header .innert_head {
+  position: relative;
+  gap: 14px;
+}
+
+.header-alt #header .search_form {
+  flex: 1;
+  margin: 0;
+  width: auto;
+  max-width: 474px;
+  padding: 4px;
+  height: 60px;
+}
+
+.header-alt #header .search_form .srch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 7px;
+  padding: 0 16px;
+  background: #fcfcfc;
+  height: 52px;
+}
+
+.header-alt #header .search_form .icon-loop {
+  position: static;
+  transform: none;
+  font-size: 24px;
+  color: #757575;
+  flex-shrink: 0;
+}
+
+.header-alt #header .search_form input[type=text] {
+  flex: 1;
+  height: 100%;
+  padding: 0;
+  font-size: 18px;
+  line-height: normal;
+  color: #0d0d0d;
+}
+
+.header-alt #header .search_form input[type=text]::placeholder {
+  color: #757575;
+}
+
+.header-alt__actions {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.header-alt__pricing {
+  font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  color: #3a50e0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-alt__pricing:hover {
+  text-decoration: underline;
+}
+
+.header-alt__signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 60px;
+  min-width: 148px;
+  padding: 5px 29px;
+  border-radius: 8px;
+  background: #3a50e0;
+  font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.header-alt__signin:hover {
+  background: #2d41c9;
+}
+
+.header-alt__signin svg {
+  flex-shrink: 0;
+  width: 19px;
+  height: 21px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .header-alt #header {
+    padding: 20px 0;
+  }
+
+  .header-alt__actions {
+    display: none;
+  }
+
+  .header-alt #header .logo {
+    width: 81px;
+    height: 43px;
+  }
+
+  .header-alt #header .innert_head {
+    gap: 10px;
+  }
+
+  .header-alt #header .search_form {
+    height: 44px;
+  }
+
+  .header-alt #header .search_form .srch {
+    height: 36px;
+    padding: 0 12px;
+  }
+
+  .header-alt #header .search_form .icon-loop {
+    font-size: 18px;
+  }
+
+  .header-alt #header .search_form input[type=text] {
+    font-size: 14px;
+  }
+
+}
+
+
+
 .account {
   background: #eef3fc;
 }
@@ -778,9 +926,7 @@
   box-shadow: 0 4px 16.8px rgba(0, 0, 0, 0.03);
 }
 
-.account-dropdown.is-open {
-  display: block;
-}
+
 
 .account-dropdown__avatar {
   display: flex;
@@ -860,6 +1006,21 @@
   object-fit: contain;
 }
 
+.account-dropdown .header-alt__signin {
+  justify-content: space-between;
+  padding: 5px 15px;
+  width: 181px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 auto 10px;
+}
+
+.account-dropdown .header-alt__signin svg {
+  width: 15px;
+  height: 16px;
+}
+
 @media only screen and (max-width: 1616px) {
   .account #header .container {
     padding-left: 98px;
@@ -884,6 +1045,10 @@
 
   .account-settings .account-burger {
     display: flex;
+  }
+
+  .account-settings .account-dropdown.is-open {
+    display: block;
   }
 
   .account-settings__sidebar {
@@ -985,6 +1150,10 @@
 
   .account-burger {
     display: flex;
+  }
+
+  .account-dropdown.is-open {
+    display: block;
   }
 
   .account-page__layout {
