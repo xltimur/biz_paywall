@@ -1,82 +1,89 @@
-(function () {
-    var burger = document.querySelector(".account-burger");
-    var dropdown = document.getElementById("account-dropdown");
-    if (burger && dropdown) {
-        burger.addEventListener("click", function (e) {
-            e.stopPropagation();
-            burger.classList.toggle("is-active");
-            dropdown.classList.toggle("is-open");
-        });
-        document.addEventListener("click", function (e) {
-            if (!dropdown.contains(e.target) && !burger.contains(e.target)) {
-                burger.classList.remove("is-active");
-                dropdown.classList.remove("is-open");
-            }
-        });
-    }
-})();
+function initAccountDropdown() {
+    var $burger = $(".account-burger");
+    var $dropdown = $("#account-dropdown");
 
-(function () {
-    var forgotEmailToggle = document.getElementById("forgot-email-toggle");
-    var defaultContent = document.getElementById("signin-default-content");
-    var validEmailContent = document.getElementById("signin-valid-email-content");
-    var confirmContent = document.getElementById("signin-confirm-content");
-    var signinEmailInput = document.getElementById("signin-email");
-    var validEmailInput = document.getElementById("valid-email");
-    var validEmailForm = document.getElementById("valid-email-form");
-    var confirmEmailText = document.getElementById("confirm-email-text");
+    if (!$burger.length || !$dropdown.length) return;
 
-    if (!forgotEmailToggle || !defaultContent || !validEmailContent || !confirmContent || !validEmailForm) {
-        return;
-    }
-
-    forgotEmailToggle.addEventListener("click", function (event) {
-        event.preventDefault();
-        defaultContent.hidden = true;
-        validEmailContent.hidden = false;
-
-        if (signinEmailInput && validEmailInput && signinEmailInput.value) {
-            validEmailInput.value = signinEmailInput.value;
-        }
-
-        if (validEmailInput) {
-            validEmailInput.focus();
-        }
+    $burger.on("click", function (e) {
+        e.stopPropagation();
+        $burger.toggleClass("is-active");
+        $dropdown.toggleClass("is-open");
     });
 
-    validEmailForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        validEmailContent.hidden = true;
-        confirmContent.hidden = false;
-
-        if (confirmEmailText && validEmailInput && validEmailInput.value) {
-            confirmEmailText.textContent = validEmailInput.value;
+    $(document).on("click", function (e) {
+        if (!$(e.target).closest($dropdown.add($burger)).length) {
+            $burger.removeClass("is-active");
+            $dropdown.removeClass("is-open");
         }
     });
-})();
+}
 
-(function () {
-    var toggles = document.querySelectorAll('.account-form__toggle');
-    toggles.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var wrap = this.closest('.account-form__field_password');
-            var input = wrap ? wrap.querySelector('input') : null;
-            if (!input) return;
-            var isPassword = input.type === 'password';
-            input.type = isPassword ? 'text' : 'password';
-            this.setAttribute('aria-pressed', isPassword ? 'true' : 'false');
-            this.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
-        });
+function initSigninFlow() {
+    var $forgotEmailToggle = $("#forgot-email-toggle");
+    var $defaultContent = $("#signin-default-content");
+    var $validEmailContent = $("#signin-valid-email-content");
+    var $confirmContent = $("#signin-confirm-content");
+    var $signinEmailInput = $("#signin-email");
+    var $validEmailInput = $("#valid-email");
+    var $validEmailForm = $("#valid-email-form");
+    var $confirmEmailText = $("#confirm-email-text");
+
+    if (!$forgotEmailToggle.length || !$defaultContent.length || !$validEmailContent.length || !$confirmContent.length || !$validEmailForm.length) return;
+
+    $forgotEmailToggle.on("click", function (e) {
+        e.preventDefault();
+        $defaultContent.prop("hidden", true);
+        $validEmailContent.prop("hidden", false);
+
+        if ($signinEmailInput.length && $validEmailInput.length && $signinEmailInput.val()) {
+            $validEmailInput.val($signinEmailInput.val());
+        }
+
+        if ($validEmailInput.length) {
+            $validEmailInput.trigger("focus");
+        }
     });
 
-    var signupForm = document.querySelector('.account-form_signup');
-    var signupSuccess = document.querySelector('.account-card_success');
+    $validEmailForm.on("submit", function (e) {
+        e.preventDefault();
+        $validEmailContent.prop("hidden", true);
+        $confirmContent.prop("hidden", false);
 
-    if (signupForm && signupSuccess) {
-        signupForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            signupForm.hidden = true;
-            signupSuccess.hidden = false;
-        });
-    }
-})();
+        if ($confirmEmailText.length && $validEmailInput.length && $validEmailInput.val()) {
+            $confirmEmailText.text($validEmailInput.val());
+        }
+    });
+}
+
+function initPasswordToggle() {
+    $(".account-form__toggle").on("click", function () {
+        var $btn = $(this);
+        var $input = $btn.closest(".account-form__field_password").find("input");
+        if (!$input.length) return;
+
+        var isPassword = $input.attr("type") === "password";
+        $input.attr("type", isPassword ? "text" : "password");
+        $btn.attr("aria-pressed", isPassword ? "true" : "false");
+        $btn.attr("aria-label", isPassword ? "Hide password" : "Show password");
+    });
+}
+
+function initSignupForm() {
+    var $signupForm = $(".account-form_signup");
+    var $signupSuccess = $(".account-card_success");
+
+    if (!$signupForm.length || !$signupSuccess.length) return;
+
+    $signupForm.on("submit", function (e) {
+        e.preventDefault();
+        $signupForm.prop("hidden", true);
+        $signupSuccess.prop("hidden", false);
+    });
+}
+
+$(document).ready(function () {
+    initAccountDropdown();
+    initSigninFlow();
+    initPasswordToggle();
+    initSignupForm();
+});
