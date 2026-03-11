@@ -71,6 +71,7 @@
   .landing-header .header-alt__actions {
    display: flex;
   }
+
   .landing-header .header-alt__pricing {
     height: 44px;
     min-width: auto;
