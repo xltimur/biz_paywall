@@ -58,6 +58,30 @@
   height: 16px;
 }
 
+.logged.header-alt__actions {
+  gap: 27px;
+}
+
+.logged .header-alt__pricing {
+  background: transparent;
+  padding: 0;
+  height: auto;
+  min-width: 0;
+}
+
+.logged .header-alt__pricing:hover {
+  background: transparent;
+  text-decoration: underline;
+}
+
+.landing-header .header-alt__avatar {
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  color: #FCFCFC;
+  background: #3D52E1;
+}
+
 @media only screen and (max-width: 767px) {
   .landing-header #header {
     padding: 20px 0;
@@ -66,10 +90,6 @@
   .landing-header #header .logo {
     width: 81px;
     height: 43px;
-  }
-
-  .landing-header .header-alt__actions {
-   display: flex;
   }
 
   .landing-header .header-alt__pricing {
@@ -158,6 +178,7 @@
   margin-left: auto;
 }
 
+
 .header-alt__pricing {
   font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -200,6 +221,28 @@
   flex-shrink: 0;
   width: 19px;
   height: 21px;
+}
+
+.header-alt__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #D2DFFF;
+  font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #3D52E1;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.header-alt__avatar:hover {
+  opacity: 0.8;
 }
 
 
@@ -260,7 +303,7 @@
   background-position: 100% 0;
 }
 
-.account-page__layout .container{
+.account-page__layout .container {
   max-width: 1615px;
   padding: 0 20px;
 }
@@ -325,12 +368,9 @@
   font-weight: 600;
 }
 
-
-
 .account-form_signin {
   margin-top: 30px;
 }
-
 
 .account-form_valid-email {
   margin-top: 46px;
@@ -445,7 +485,7 @@
 }
 
 .account-form__field_password-strength {
-  margin-bottom: 4px!important;
+  margin-bottom: 4px !important;
 }
 
 .account-form__toggle {
@@ -651,8 +691,8 @@
 }
 
 .account-settings .account-card__logo {
-    width: 97px;
-    height: 50px;
+  width: 97px;
+  height: 50px;
 }
 
 .account-settings__header-right {
@@ -1016,7 +1056,6 @@
 }
 
 
-
 .account-dropdown__avatar {
   display: flex;
   align-items: center;
@@ -1026,6 +1065,7 @@
   margin: 0 0 0 20px;
   border-radius: 50%;
   background: #3d52e1;
+  text-decoration: none;
   font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -1117,6 +1157,7 @@
     max-width: 100%;
   }
 }
+
 @media only screen and (max-width: 991px) {
   .account-settings .account-settings__layout {
     display: block;
@@ -1138,6 +1179,10 @@
 
   .account-settings .account-dropdown.is-open {
     display: block;
+  }
+
+  .account-page__layout {
+    background-image: none!important;
   }
 
   .account-settings__sidebar {
@@ -1209,14 +1254,17 @@
   .account-settings__section .account-settings__page-title {
     margin: 0 0 27px;
   }
+
   .account-settings__privacy-link {
     font-size: 18px;
   }
+
   .account-settings__privacy-desc {
     font-size: 16px;
     line-height: 1.2;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .account #header {
     display: block;
@@ -1247,7 +1295,7 @@
 
   .account-page__layout {
     padding: 17px 0 10px;
-    }
+  }
 
   .account-page__layout .container {
     padding: 0 10px;
@@ -1276,6 +1324,7 @@
   .account-form__forgot {
     font-size: 16px;
   }
+
   .account-settings__actions .account-btn,
   .account-btn {
     font-size: 16px;
@@ -1285,8 +1334,9 @@
   .account-card__terms {
     font-size: 16px;
   }
+
   .account-form__field_password-strength {
-    margin: 0!important;
+    margin: 0 !important;
   }
 
   .account-form__strength {

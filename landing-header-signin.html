@@ -58,6 +58,30 @@
                         </svg>
                     </a>
                 </div>
+                <button class="account-burger" type="button" aria-label="Open navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="account-dropdown" id="account-dropdown">
+                    <ul class="account-dropdown__nav">
+                        <li><a href="https://www.bizprofile.net/about-us">About Us</a></li>
+                        <li><a href="https://www.bizprofile.net/pricing">Pricing</a></li>
+                        <li><a href="https://www.bizprofile.net/contactus">Contact Us</a></li>
+                    </ul>
+                    <div class="account-dropdown__divider"></div>
+                    <a href="/signin" class="header-alt__signin">
+                        <span>Sign In</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" fill="currentColor" viewBox="0 0 15 17">
+                            <g clip-path="url(#a)">
+                                <path d="M3.611 12.75v-1.5a.75.75 0 0 1 1.5 0v1.5c0 1.27.984 2.25 2.139 2.25h3.611C12.016 15 13 14.02 13 12.75v-9c0-1.27-.984-2.25-2.139-2.25H7.25c-1.155 0-2.139.98-2.139 2.25v1.5a.75.75 0 0 1-1.5 0v-1.5C3.611 1.706 5.214 0 7.25 0h3.611C12.897 0 14.5 1.706 14.5 3.75v9c0 2.044-1.603 3.75-3.639 3.75H7.25c-2.036 0-3.639-1.706-3.639-3.75Zm3.841-7.29a.75.75 0 0 1 1.06.02l1.656 1.72a1.521 1.521 0 0 1 0 2.1l-1.655 1.72a.75.75 0 0 1-1.081-1.04L8.375 9H.75a.75.75 0 0 1 0-1.5h7.625l-.943-.98a.75.75 0 0 1 .02-1.06Z"/>
+                            </g>
+                            <defs>
+                                <clipPath id="a">
+                                    <path d="M0 0h15v17H0z"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </nav>
             </div>
         </div>
     </header>
@@ -259,6 +283,9 @@
         });
 
     </script>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/account-pages.js"></script>
 
 </body>
 
