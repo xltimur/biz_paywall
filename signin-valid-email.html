@@ -46,30 +46,26 @@
         <div class="account-page__layout" style="background-image: url('../account-img/Subtract.svg')">
             <div class="container">
                 <div class="account-card">
-                    <div class="account-card__content">
-                        <h1 class="account-card__title">Enter your info to <span class="account-card__title_accent">Sign In</span></h1>
-                        <p class="account-card__subtitle">Or get started with a new account</p>
-                        <form class="account-form account-form_signin" action="#" method="get">
-                                <div class="account-form__group">
-                                    <div class="inpt_lb inpt_lb_error">
-                                        <label class="label">Email</label>
-                                        <input type="email" name="email" placeholder="Enter your email" autocomplete="email" />
-                                        <span class="inpt_lb__error-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#EB5757"/></svg>
-                                    </span>
-                                    </div>
-                                    <span class="account-form__error">That username is taken. Try another.</span>
+                    <div class="account-card__content" >
+                        <h1 class="account-card__title">Please enter a valid email</h1>
+                        <p class="account-card__subtitle account-card__subtitle_large">
+                            Enter a valid email address and we’ll send you a sign-in link to your email address. Click the link to sign in automatically. If you don’t see the email, check your <span class="account-card__subtitle_strong">spam folder.</span>
+                        </p>
+                        <form class="account-form account-form_valid-email"action="#" method="get">
+                            <div class="account-form__group">
+                                <div class="inpt_lb">
+                                    <label class="label">Email</label>
+                                    <input type="email" name="email" placeholder="Enter your email" autocomplete="email" />
                                 </div>
-                                <a href="#" class="account-form__forgot" >Forgot email address?</a>
-                                <button type="submit" class="btn account-btn">Continue</button>
-                            </form>
+                            </div>
+                            <button type="submit" class="btn account-btn">Email me</button>
+                        </form>
                         <p class="account-card__terms">
                             By continuing, you agree to BizProfile’s <a href="https://www.bizprofile.net/terms">Terms of Service</a> and <a href="https://www.bizprofile.net/privacy">Privacy Policy</a>
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

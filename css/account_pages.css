@@ -268,7 +268,7 @@
   max-width: 775px;
   min-height: 840px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   padding: 100px 102px 100px 78px;
   border-radius: 20px;
   background: #fcfcfc;
@@ -289,11 +289,6 @@
 .account-card__logo a {
   display: block;
   height: 100%;
-}
-
-.account-card__content-wrapper,
-.account-card__content {
-  margin: auto 0;
 }
 
 .account-card__title {
@@ -1306,10 +1301,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2px;
-  }
-
-  .account-card__title {
-    font-size: 38px;
   }
 
   .account-success__text {
