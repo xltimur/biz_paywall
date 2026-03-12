@@ -1,7 +1,24 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.search_form .icon-loop:before {
+  content: "\e90d";
+}
+
 /*Update new header*/
 .header-alt #header {
   padding: 30px 0 23px;
   margin: 0;
+  z-index: 2;
 }
 
 .header-alt #header .logo {
@@ -20,9 +37,11 @@
   flex: 1;
   margin: 0;
   width: auto;
+  background: #3A50E0!important;
   max-width: 474px;
   padding: 4px;
   height: 60px;
+  border-radius: 8px;
 }
 
 .header-alt #header .search_form .srch {
@@ -30,6 +49,7 @@
   flex-direction: row-reverse;
   align-items: center;
   gap: 7px;
+  border-radius: 5px;
   padding: 0 16px;
   background: #ffffff;
   height: 52px;
