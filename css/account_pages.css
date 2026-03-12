@@ -1,121 +1,6 @@
-/* ===== Landing Header ===== */
-
-.landing-header #header {
-  padding: 30px 0;
-  margin: 0;
-}
-
-.landing-header #header .innert_head {
-  align-items: center;
-}
-
-.landing-header #header .logo {
-  width: 97px;
-  height: 50px;
-  flex-shrink: 0;
-  margin: 0;
-}
-
-.landing-header .header-alt__actions {
-  gap: 15px;
-}
-
-.landing-header .header-alt__pricing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  padding: 10px 15px;
-  min-width: 104px;
-  border-radius: 5px;
-  background: #fcfcfc;
-  font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1;
-  color: #3a50e0;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-
-.landing-header .header-alt__pricing:hover {
-  text-decoration: none;
-  background: #f0f4ff;
-}
-
-.landing-header .header-alt__signin {
-  height: 50px;
-  min-width: 110px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  gap: 8px;
-}
-
-.landing-header .header-alt__signin svg {
-  width: 14px;
-  height: 16px;
-}
-
-.logged.header-alt__actions {
-  gap: 27px;
-}
-
-.logged .header-alt__pricing {
-  background: transparent;
-  padding: 0;
-  height: auto;
-  min-width: 0;
-}
-
-.logged .header-alt__pricing:hover {
-  background: transparent;
-  text-decoration: underline;
-}
-
-.landing-header .header-alt__avatar {
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  color: #FCFCFC;
-  background: #3D52E1;
-}
-
-@media only screen and (max-width: 767px) {
-  .landing-header #header {
-    padding: 20px 0;
-  }
-
-  .landing-header #header .logo {
-    width: 81px;
-    height: 43px;
-  }
-
-  .landing-header .header-alt__pricing {
-    height: 44px;
-    min-width: auto;
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .landing-header .header-alt__signin {
-    height: 44px;
-    min-width: auto;
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .landing-header .header-alt__signin svg {
-    width: 12px;
-    height: 14px;
-  }
-}
-
-/* ===== The end - Landing Header ===== */
-
+/*Update new header*/
 .header-alt #header {
-  padding: 30px 0;
+  padding: 30px 0 23px;
   margin: 0;
 }
 
@@ -127,6 +12,7 @@
 
 .header-alt #header .innert_head {
   position: relative;
+  align-items: center;
   gap: 14px;
 }
 
@@ -145,7 +31,7 @@
   align-items: center;
   gap: 7px;
   padding: 0 16px;
-  background: #fcfcfc;
+  background: #ffffff;
   height: 52px;
 }
 
@@ -178,7 +64,6 @@
   margin-left: auto;
 }
 
-
 .header-alt__pricing {
   font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -193,36 +78,6 @@
   text-decoration: underline;
 }
 
-.header-alt__signin {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 60px;
-  min-width: 148px;
-  padding: 5px 29px;
-  border-radius: 8px;
-  background: #3a50e0;
-  font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1;
-  color: #fff;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-
-.header-alt__signin:hover {
-  background: #2d41c9;
-}
-
-.header-alt__signin svg {
-  flex-shrink: 0;
-  width: 19px;
-  height: 21px;
-}
-
 .header-alt__avatar {
   display: flex;
   align-items: center;
@@ -230,19 +85,50 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #D2DFFF;
+  background: #3D52E1;
   font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
-  color: #3D52E1;
+  color: #fcfcfc;
   text-decoration: none;
   flex-shrink: 0;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
 
 .header-alt__avatar:hover {
   opacity: 0.8;
+}
+
+.header-alt__avatar svg {
+  flex-shrink: 0;
+}
+
+.account-dropdown__signin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 181px;
+  height: 40px;
+  margin: 0 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #3D52E1;
+  font-family: 'Overused Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #fcfcfc;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.account-dropdown__signin:hover {
+  background: #2d41c9;
+}
+
+.account-dropdown__signin svg {
+  flex-shrink: 0;
 }
 
 
@@ -283,6 +169,9 @@
 
 }
 
+
+/* ===========The end ========
+ =========Update new header =====*/
 
 .account {
   background: #eef3fc;
@@ -1052,7 +941,7 @@
   padding: 15px 0;
   border-radius: 8px;
   background: #fcfcfc;
-  box-shadow: 0 4px 16.8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.06);
 }
 
 
