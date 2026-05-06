@@ -4,19 +4,15 @@ $(document).ready(function () {
 });
 
 function initBillingToggle() {
-  const $billingToggles = $("[data-billing-toggle]");
-  const $prices = $("[data-price]");
-  const $billingNotes = $("[data-billing-note]");
+  $("[data-billing-toggle]").on("click", function () {
+    const $toggle = $(this);
+    const $section = $toggle.closest(".hero__pricing");
+    const isAnnual = !$toggle.hasClass("is-annual");
 
-  $billingToggles.on("click", function () {
-    setBilling(!$(this).hasClass("is-annual"));
+    $toggle.toggleClass("is-annual", isAnnual).attr("aria-pressed", String(isAnnual));
+    $section.find("[data-price]").text(isAnnual ? "$15" : "$30");
+    $section.find("[data-billing-note]").text(isAnnual ? "billed $180 yearly" : "billed monthly");
   });
-
-  function setBilling(isAnnual) {
-    $billingToggles.toggleClass("is-annual", isAnnual).attr("aria-pressed", String(isAnnual));
-    $prices.text(isAnnual ? "$15" : "$30");
-    $billingNotes.text(isAnnual ? "billed $180 yearly" : "billed monthly");
-  }
 }
 
 function initFaqAccordion() {
