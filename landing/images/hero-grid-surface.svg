@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1276.5625" height="817" viewBox="0 0 1276.5625 817" fill="none">
+  <defs>
+    <pattern id="grid" width="60.788692" height="60.788692" patternUnits="userSpaceOnUse">
+      <path d="M0 0h60.788692v60.788692H0z" stroke="#E4EAFC" stroke-width="1.215774" fill="none"/>
+    </pattern>
+  </defs>
+  <g fill="#DBE2FB" opacity=".43">
+    <rect x="121.577477" y="60.788982" width="60.788692" height="60.788692"/>
+    <rect x="547.098145" y="60.788982" width="60.788692" height="60.788692"/>
+    <rect x="972.61908" y="121.578125" width="60.788692" height="60.788692"/>
+    <rect x="182.366211" y="243.156172" width="60.788692" height="60.788692"/>
+    <rect x="729.464355" y="243.156172" width="60.788692" height="60.788692"/>
+    <rect x="1094.196289" y="303.945406" width="60.788692" height="60.788692"/>
+    <rect x="486.309418" y="425.519439" width="60.788692" height="60.788692"/>
+    <rect x="243.154953" y="486.308673" width="60.788692" height="60.788692"/>
+    <rect x="729.464294" y="729.464844" width="60.788692" height="60.788692"/>
+  </g>
+  <rect width="1276.5625" height="817" fill="url(#grid)"/>
+</svg>
